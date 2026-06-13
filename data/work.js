@@ -11,7 +11,7 @@
  *   client     client / partner
  *   role       your role
  *   dates      e.g. "2024"
- *   categories any of: experiential, ctv, production, hospitality
+ *   categories any of: experiential, social, ctv, publisher, production
  *   story      2–3 line story (quick-look + case page)
  *   result     one headline result metric
  *   tone       palette key for the placeholder poster (see TONES in styles)
@@ -34,7 +34,7 @@ const WORK = [
     client: "Google × Pinterest",
     role: "Creative Lead",
     dates: "2024 — Present",
-    categories: ["experiential"],
+    categories: ["experiential", "social"],
     tone: "oxblood",
     poster: "",
     reel: "",
@@ -90,13 +90,29 @@ const WORK = [
     client: "Google Pixel",
     role: "Creative Direction · CTV",
     dates: "2024",
-    categories: ["ctv"],
+    categories: ["ctv", "social"],
     tone: "olive",
     poster: "",
     reel: "",
     story:
       "A culture-forward Pixel integration riding the White Lotus moment across connected TV and social.",
     result: "Tentpole cultural tie-in",
+  },
+  {
+    id: "farm-to-turntable",
+    type: "work",
+    tier: 2,
+    title: "Farm to Turntable",
+    client: "Jean's",
+    role: "Producer · Hospitality",
+    dates: "2024 — Present",
+    categories: ["experiential", "social"],
+    tone: "almond",
+    poster: "",
+    reel: "",
+    story:
+      "Private dinners and cultural programming at Jean's — hospitality as a produced experience, menu to music.",
+    result: "Recurring cultural dinner series",
   },
   {
     id: "culture-creators",
@@ -106,7 +122,7 @@ const WORK = [
     client: "Google",
     role: "Creative · Production",
     dates: "2023 — Present",
-    categories: ["ctv"],
+    categories: ["social", "ctv"],
     tone: "mauve",
     poster: "",
     reel: "",
@@ -129,7 +145,7 @@ const WORK = [
     client: "Google Shopping",
     role: "Creative · Production",
     dates: "2024",
-    categories: ["ctv"],
+    categories: ["social", "ctv"],
     tone: "almond",
     poster: "",
     reel: "",
@@ -149,7 +165,7 @@ const WORK = [
     client: "Complex × Google",
     role: "Creative · Production",
     dates: "2023 — 2024",
-    categories: ["ctv"],
+    categories: ["publisher", "social", "ctv"],
     tone: "deepox",
     poster: "",
     reel: "",
@@ -184,22 +200,6 @@ const WORK = [
     story:
       "Award-winning experiential programs — experience design and fabrication oversight, produced end to end.",
     result: "Award-winning program",
-  },
-  {
-    id: "farm-to-turntable",
-    type: "work",
-    tier: 2,
-    title: "Farm to Turntable",
-    client: "Jean's",
-    role: "Producer · Hospitality",
-    dates: "2024 — Present",
-    categories: ["hospitality"],
-    tone: "olive",
-    poster: "",
-    reel: "",
-    story:
-      "Private dinners and cultural programming at Jean's — hospitality as a produced experience, menu to music.",
-    result: "Recurring cultural dinner series",
   },
   {
     id: "vrbo",

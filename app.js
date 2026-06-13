@@ -18,10 +18,10 @@
   };
   const SWATCH = { "#847949": "olive", "#B7C5CC": "blue" };
 
-  const FILTERS = ["All", "Experiential", "CTV", "Production", "Hospitality"];
+  const FILTERS = ["All", "Experiential", "Social", "CTV", "Publisher", "Production"];
   const FILTER_DOT = {
-    All: "var(--ink)", Experiential: "var(--oxblood)", CTV: "var(--olive)",
-    Production: "var(--rustic)", Hospitality: "var(--blue)",
+    All: "var(--ink)", Experiential: "var(--oxblood)", Social: "var(--olive)",
+    CTV: "var(--blue)", Publisher: "var(--rustic)", Production: "var(--mauve)",
   };
 
   const board = document.getElementById("board");

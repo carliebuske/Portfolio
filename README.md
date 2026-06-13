@@ -29,7 +29,7 @@ Add one object to `WORK` in `data/work.js`. Set `poster` to an image path and
 `reel` to a Vimeo/Mux embed URL when assets are ready. No layout changes needed.
 
 - `tier: 1` oversized (leads the board) · `2` standard · `3` smaller
-- `categories`: any of `experiential`, `ctv`, `production`, `hospitality`
+- `categories`: any of `experiential`, `social`, `ctv`, `publisher`, `production`
 - `type: "swatch"` for a solid color bio/rest tile (`swatchHex` + `bio`)
 - `bundle: [{name, note}]` reveals talent names on hover + in the modal
 - `inDev: true` frames a case as in-development (e.g. Forma Curate)
