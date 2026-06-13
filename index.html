@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlie Buske — Portfolio</title>
+  <meta name="description" content="Portfolio of Carlie Buske" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="#top" class="nav__brand">CB</a>
+    <nav class="nav__links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="hero__eyebrow">Hello, I'm</p>
+      <h1 class="hero__title">Carlie Buske</h1>
+      <p class="hero__subtitle">
+        I build thoughtful, human-centered things on the web.
+      </p>
+      <div class="hero__actions">
+        <a href="#work" class="btn btn--primary">View my work</a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2 class="section__title">About</h2>
+      <p class="section__body">
+        This is a placeholder bio. Tell visitors who you are, what you care
+        about, and the kind of work you love doing. Swap this text out with
+        your own story — a couple of sentences is plenty.
+      </p>
+    </section>
+
+    <section id="work" class="section">
+      <h2 class="section__title">Selected Work</h2>
+      <div class="cards">
+        <article class="card">
+          <h3 class="card__title">Project One</h3>
+          <p class="card__body">A short description of what you built and why it mattered.</p>
+          <a class="card__link" href="#">Learn more →</a>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Project Two</h3>
+          <p class="card__body">A short description of what you built and why it mattered.</p>
+          <a class="card__link" href="#">Learn more →</a>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Project Three</h3>
+          <p class="card__body">A short description of what you built and why it mattered.</p>
+          <a class="card__link" href="#">Learn more →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section section--contact">
+      <h2 class="section__title">Let's talk</h2>
+      <p class="section__body">
+        Always happy to chat about new projects and ideas.
+      </p>
+      <a class="btn btn--primary" href="mailto:carlie.buske@gmail.com">Say hello</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Carlie Buske</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
