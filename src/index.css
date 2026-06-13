@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bone text-ink font-body antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Respect reduced-motion: kill smooth scroll + transitions */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Tracked-out uppercase mono label — e.g. 01 / SELECTED WORK */
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-label text-caption;
+  }
+
+  /* Hairline rule between sections */
+  .hairline {
+    @apply border-t border-ink/15;
+  }
+
+  /* Numbered section index — "01" */
+  .section-no {
+    @apply font-mono text-[11px] tracking-[0.1em] text-oxblood;
+  }
+}
+
+/* The grid tile being dragged should sit above its peers */
+.tile-dragging {
+  z-index: 50;
+  cursor: grabbing;
+}
+
+/* Hide scrollbars on the horizontal filter row (mobile) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
