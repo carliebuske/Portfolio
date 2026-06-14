@@ -105,7 +105,7 @@ const WORK = [
     title: "Farm to Turntable",
     client: "Jean's × Les Enfants du Marché",
     role: "Producer · Hospitality",
-    dates: "2026 — Present",
+    dates: "May 2026 (soon to be a monthly series)",
     categories: ["experiential", "social"],
     tone: "almond",
     poster: "",
