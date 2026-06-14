@@ -391,6 +391,21 @@ em { font-style: normal; color: var(--oxblood); }
 }
 .client-link:hover { color: var(--oxblood); border-bottom-color: var(--oxblood); }
 
+/* Talent / collabs — deliberately quiet: small, regular weight, not a wordlist */
+.talentlist {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  line-height: 1.75;
+  letter-spacing: 0;
+  color: var(--ink);
+  opacity: 0.9;
+  margin: 0.6rem 0 0.3rem;
+  max-width: 60ch;
+}
+.talentlist i { font-style: normal; color: var(--gray); margin: 0 0.25em; }
+.talentlist .client-link { border-bottom-width: 1px; }
+
 /* ---------- CONTACT ---------- */
 .contact__mail {
   display: inline-block;
