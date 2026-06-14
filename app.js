@@ -97,9 +97,11 @@
          <p class="tile__sub">${[item.client, item.dates].filter(Boolean).join(" · ")}</p>
        </div>`;
 
-    // hover (desktop) → play muted loop
-    el.addEventListener("mouseenter", () => playTile(el));
-    el.addEventListener("mouseleave", () => stopTile(el));
+    // hover → play (desktop only; mobile autoplays on scroll-into-middle)
+    if (HOVER) {
+      el.addEventListener("mouseenter", () => playTile(el));
+      el.addEventListener("mouseleave", () => stopTile(el));
+    }
     // click → quick-look (drag handler suppresses this when dragging)
     el.addEventListener("click", (e) => {
       if (el.dataset.dragged === "1") { el.dataset.dragged = "0"; return; }
@@ -130,12 +132,16 @@
     else media.innerHTML = ""; // tear down the Vimeo iframe so it stops
   }
 
-  /* mobile: autoplay when scrolled into view */
-  const io = "IntersectionObserver" in window
+  /* Playback model:
+     - Desktop (hover capable): play on hover, stop on leave.
+     - Mobile (no hover): autoplay once the tile crosses the screen's middle.
+       rootMargin -50%/-50% collapses the viewport to a center line; a tile
+       "intersects" only while it straddles that line. */
+  const HOVER = matchMedia("(hover: hover)").matches;
+  const io = (!HOVER && "IntersectionObserver" in window)
     ? new IntersectionObserver((entries) => {
-        if (!matchMedia("(hover: none)").matches) return;
         entries.forEach((en) => (en.isIntersecting ? playTile(en.target) : stopTile(en.target)));
-      }, { threshold: 0.6 })
+      }, { rootMargin: "-50% 0px -50% 0px", threshold: 0 })
     : null;
 
   /* ---------- render ---------- */

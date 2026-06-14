@@ -237,6 +237,7 @@ em { font-style: normal; color: var(--oxblood); }
 .tile__media {
   position: absolute; inset: 0;
   opacity: 0;
+  pointer-events: none;        /* let taps/clicks fall through to the tile */
   transition: opacity 0.3s ease;
 }
 .tile__media video, .tile__media iframe {
