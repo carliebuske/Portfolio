@@ -18,16 +18,24 @@
     .case__meta { font-family:"Space Mono",monospace; font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink); opacity:0.6; margin:1rem 0 1.6rem; }
     .case__story { font-size:clamp(1.2rem,2.4vw,1.7rem); line-height:1.4; max-width:50ch; }
     .case__result { margin-top:1.6rem; font-family:"Archivo",sans-serif; font-weight:800; font-size:1.4rem; color:var(--oxblood); }
-    .case__gallery { margin-top:2.5rem; display:grid; grid-template-columns:repeat(2,1fr); gap:var(--gap); }
-    .case__gallery img { width:100%; height:100%; aspect-ratio:3/2; object-fit:cover; border-radius:14px; image-orientation:from-image; display:block; }
-    @media (max-width:520px){ .case__gallery { grid-template-columns:1fr; } }
+    /* Pinterest-style masonry: natural image ratios, no cropping */
+    .case__gallery { margin-top:2.5rem; column-count:3; column-gap:var(--gap); }
+    .case__gallery img { width:100%; height:auto; border-radius:18px; image-orientation:from-image; display:block; margin:0 0 var(--gap); break-inside:avoid; }
+    @media (max-width:900px){ .case__gallery { column-count:2; } }
+    @media (max-width:520px){ .case__gallery { column-count:1; } }
     .case__indev { display:inline-block; background:var(--oxblood); color:var(--cream); font-family:"Space Mono",monospace; font-size:0.66rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.3rem 0.6rem; border-radius:3px; margin-bottom:1rem; }
   </style>
 </head>
 <body>
   <header class="nav">
     <a href="index.html" class="nav__brand">Carlie Nicole<span class="dot">.</span></a>
-    <nav class="nav__links"><a href="index.html#work"><span class="num">←</span> Back to work</a></nav>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="index.html#work"><span class="num">01</span> Work</a>
+      <a href="index.html#capabilities"><span class="num">02</span> Capabilities</a>
+      <a href="index.html#about"><span class="num">03</span> About</a>
+      <a href="index.html#clients"><span class="num">04</span> Clients</a>
+      <a href="index.html#contact"><span class="num">05</span> Contact</a>
+    </nav>
   </header>
   <main class="case" id="case"></main>
   <div class="watermark" aria-hidden="true">carlie.wtf</div>

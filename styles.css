@@ -206,7 +206,7 @@ em { font-style: normal; color: var(--oxblood); }
 .tile {
   position: relative;
   overflow: hidden;
-  border-radius: 14px;         /* rounded board covers */
+  border-radius: 24px;         /* soft, very rounded board covers */
   cursor: pointer;
   background: var(--ink);
   user-select: none;
@@ -233,6 +233,7 @@ em { font-style: normal; color: var(--oxblood); }
   inset: 0;
   background-size: cover;
   background-position: center;
+  transition: opacity 0.3s ease;
 }
 .tile__media {
   position: absolute; inset: 0;
@@ -241,9 +242,31 @@ em { font-style: normal; color: var(--oxblood); }
   transition: opacity 0.3s ease;
 }
 .tile__media video, .tile__media iframe {
+  position: absolute; inset: 0;
   width: 100%; height: 100%; object-fit: cover; border: 0; display: block;
 }
 .tile.playing .tile__media { opacity: 1; }
+/* When the reel plays, drop the cover so the video is full-bleed, not a backdrop */
+.tile.playing .tile__poster { opacity: 0; }
+
+/* Drag-to-resize grip (desktop) — bottom-right corner */
+.tile__resize {
+  position: absolute; right: 0; bottom: 0;
+  width: 26px; height: 26px;
+  z-index: 6; cursor: nwse-resize;
+  opacity: 0; transition: opacity 0.15s ease;
+  background: linear-gradient(135deg, transparent 46%, rgba(242,238,230,0.95) 46%);
+  border-bottom-right-radius: 22px;
+  touch-action: none;
+}
+.tile__resize::after {
+  content: ""; position: absolute; right: 6px; bottom: 6px;
+  width: 7px; height: 7px;
+  border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink);
+  opacity: 0.7;
+}
+.tile:hover .tile__resize { opacity: 0.9; }
+.tile.resizing { box-shadow: 0 0 0 2px var(--oxblood); z-index: 7; }
 
 .tile__meta {
   position: absolute;
@@ -346,8 +369,9 @@ em { font-style: normal; color: var(--oxblood); }
 /* ---------- ABOUT ---------- */
 .about { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(1.5rem, 4vw, 4rem); margin-top: 1.4rem; }
 .about__lead { font-size: clamp(1.3rem, 2.6vw, 2rem); line-height: 1.3; letter-spacing: -0.01em; }
-.about__school { font-family: "Archivo", sans-serif; font-weight: 800; font-size: 1.25rem; margin-top: 0.3rem; }
-.about__meta { color: var(--ink); opacity: 0.7; font-size: 0.92rem; margin-top: 0.3rem; }
+.about__school { font-family: "Archivo", sans-serif; font-weight: 800; font-size: 1.25rem; margin-top: 1.1rem; }
+.about__edu .caps__label + .about__school { margin-top: 0.4rem; }
+.about__meta { color: var(--ink); opacity: 0.7; font-size: 0.92rem; margin-top: 0.2rem; }
 .about__meta span { color: var(--oxblood); font-family: "Space Mono", monospace; font-size: 0.8rem; margin-left: 0.4rem; }
 
 /* ---------- CLIENTS / AWARDS ---------- */
@@ -374,6 +398,16 @@ em { font-style: normal; color: var(--oxblood); }
   transition: color 0.18s ease;
 }
 .contact__mail:hover { color: var(--oxblood); }
+.contact__links { margin: 0.4rem 0 1rem; }
+.contact__resume {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: "Space Mono", monospace; font-size: 0.82rem;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--oxblood); text-decoration: none;
+  border: 1px solid var(--oxblood); border-radius: 999px;
+  padding: 0.5rem 1rem; transition: background 0.18s ease, color 0.18s ease;
+}
+.contact__resume:hover { background: var(--oxblood); color: var(--cream); }
 .contact__meta { font-family: "Space Mono", monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: var(--gray); text-transform: uppercase; }
 
 /* ---------- WATERMARK ---------- */

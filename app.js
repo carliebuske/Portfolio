@@ -59,11 +59,17 @@
   }
 
   /* ---------- build one tile ---------- */
+  // tier → default footprint (columns × rows); drag-resize overrides these
+  const TIER_SPAN = { 1: [2, 2], 2: [2, 1], 3: [1, 1] };
+
   function makeTile(item) {
     const el = document.createElement("article");
     el.className = `tile tile--t${item.tier}`;
     el.dataset.id = item.id;
     el.dataset.cats = (item.categories || []).join(",");
+    const [dw, dh] = TIER_SPAN[item.tier] || [1, 1];
+    el.dataset.w = dw;
+    el.dataset.h = dh;
 
     if (item.type === "swatch") {
       const key = SWATCH[item.swatchHex];
@@ -107,6 +113,15 @@
       if (el.dataset.dragged === "1") { el.dataset.dragged = "0"; return; }
       openQuickLook(item);
     });
+
+    // resize grip (desktop only — touch devices reorder via press-and-hold)
+    if (HOVER) {
+      const grip = document.createElement("span");
+      grip.className = "tile__resize";
+      grip.setAttribute("aria-hidden", "true");
+      grip.addEventListener("pointerdown", startResize);
+      el.appendChild(grip);
+    }
     return el;
   }
 
@@ -153,8 +168,119 @@
       if (io && item.reel) io.observe(el);
     });
     enableDrag();
+    layout();
     applyFilter();
   }
+
+  /* ---------- layout engine ----------
+     A deterministic dense packer that mirrors (and replaces) CSS auto-placement
+     so we can (a) reflow neighbours when a tile is resized/reordered and
+     (b) grow tiles to fill any gaps, leaving a flush rectangular block instead
+     of an orphaned last row. Footprints come from each tile's data-w / data-h. */
+  function gridCols() {
+    const cols = getComputedStyle(board).gridTemplateColumns.split(" ").filter(Boolean).length;
+    return cols || 6;
+  }
+  function layout() {
+    const tiles = [...board.children];
+    if (!tiles.length) return;
+    const cols = gridCols();
+    const occ = [];                                  // occ[row][col] = taken?
+    const row = (r) => { while (occ.length <= r) occ.push(new Array(cols).fill(false)); return occ[r]; };
+    const freeAt = (r, c, w, h, max) => {
+      if (c + w > cols) return false;
+      for (let i = r; i < r + h; i++) {
+        if (max != null && i >= max) return false;   // don't spill past the block
+        const rr = row(i);
+        for (let j = c; j < c + w; j++) if (rr[j]) return false;
+      }
+      return true;
+    };
+    const mark = (r, c, w, h) => {
+      for (let i = r; i < r + h; i++) { const rr = row(i); for (let j = c; j < c + w; j++) rr[j] = true; }
+    };
+
+    // 1) pack each tile into the first free slot that fits
+    tiles.forEach((t) => {
+      let w = Math.max(1, Math.min(cols, +t.dataset.w || 1));
+      let h = Math.max(1, +t.dataset.h || 1);
+      let placed = false;
+      for (let r = 0; !placed; r++) {
+        row(r);
+        for (let c = 0; c <= cols - w; c++) {
+          if (freeAt(r, c, w, h)) { mark(r, c, w, h); t._pos = { r, c, w, h }; placed = true; break; }
+        }
+      }
+    });
+
+    // 2) fill any gaps so the block is solid — grow the tile above a hole down,
+    //    else the tile to its left rightward. Bounded to the existing rows so we
+    //    never create a brand-new ragged row.
+    const maxRows = occ.length;
+    let changed = true, guard = 0;
+    while (changed && guard++ < maxRows * cols + 8) {
+      changed = false;
+      for (let r = 0; r < maxRows; r++) {
+        for (let c = 0; c < cols; c++) {
+          if (occ[r][c]) continue;
+          const above = r > 0 && tiles.find((t) => t._pos.r + t._pos.h === r && t._pos.c <= c && c < t._pos.c + t._pos.w);
+          if (above && freeAt(above._pos.r + above._pos.h, above._pos.c, above._pos.w, 1, maxRows)) {
+            mark(above._pos.r + above._pos.h, above._pos.c, above._pos.w, 1); above._pos.h++; changed = true; continue;
+          }
+          const left = c > 0 && tiles.find((t) => t._pos.c + t._pos.w === c && t._pos.r <= r && r < t._pos.r + t._pos.h);
+          if (left && freeAt(left._pos.r, left._pos.c + left._pos.w, 1, left._pos.h, maxRows)) {
+            mark(left._pos.r, left._pos.c + left._pos.w, 1, left._pos.h); left._pos.w++; changed = true;
+          }
+        }
+      }
+    }
+
+    // 3) commit to inline grid positions
+    tiles.forEach((t) => {
+      const p = t._pos;
+      t.style.gridColumn = `${p.c + 1} / span ${p.w}`;
+      t.style.gridRow = `${p.r + 1} / span ${p.h}`;
+    });
+  }
+
+  /* ---------- drag a corner to resize ---------- */
+  function startResize(e) {
+    e.preventDefault();
+    e.stopPropagation();                              // don't trigger reorder / click
+    const el = e.currentTarget.closest(".tile");
+    const cs = getComputedStyle(board);
+    const cols = gridCols();
+    const colGap = parseFloat(cs.columnGap) || 0;
+    const rowGap = parseFloat(cs.rowGap) || colGap;
+    const cellW = (board.clientWidth - colGap * (cols - 1)) / cols;
+    const rowH = parseFloat(cs.gridAutoRows) || el.offsetHeight;
+    const startW = +el.dataset.w || 1, startH = +el.dataset.h || 1;
+    const sx = e.clientX, sy = e.clientY;
+    el.classList.add("resizing");
+    try { el.setPointerCapture(e.pointerId); } catch (_) {}
+
+    const move = (ev) => {
+      const dw = Math.round((ev.clientX - sx) / (cellW + colGap));
+      const dh = Math.round((ev.clientY - sy) / (rowH + rowGap));
+      const w = Math.max(1, Math.min(cols, startW + dw));
+      const h = Math.max(1, Math.min(4, startH + dh));
+      if (String(w) !== el.dataset.w || String(h) !== el.dataset.h) {
+        el.dataset.w = w; el.dataset.h = h; layout();
+      }
+    };
+    const up = () => {
+      el.classList.remove("resizing");
+      el.dataset.dragged = "1";                       // swallow the trailing click
+      el.removeEventListener("pointermove", move);
+      el.removeEventListener("pointerup", up);
+    };
+    el.addEventListener("pointermove", move);
+    el.addEventListener("pointerup", up, { once: true });
+  }
+
+  // re-pack when the column count changes (responsive breakpoints)
+  let rT;
+  window.addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(layout, 120); });
 
   /* ---------- filters (dim/highlight in place) ---------- */
   function buildFilters() {
@@ -236,8 +362,8 @@
            systems that run it. Nine years across experiential production, creative
            direction, and innovation. Currently leading creative &amp; AI work for
            Google, including the Pinterest&nbsp;×&nbsp;Gemini back-to-school partnership.</p>
-         <p class="ql__result">University of Colorado Boulder · BA, Studio Art</p>
-         <a class="ql__cta" href="mailto:hello@carlie.wtf">hello@carlie.wtf →</a>
+         <p class="ql__result">CU Boulder · BA, Studio Art</p>
+         <a class="ql__cta" href="assets/Carlie-Buske-Resume.pdf" download>Download résumé ↓</a>
        </div>`
     );
   }
@@ -288,6 +414,7 @@
       const li = tiles.indexOf(lifted), ti = tiles.indexOf(target);
       if (li < ti) board.insertBefore(lifted, target.nextSibling);
       else board.insertBefore(lifted, target);
+      layout();                         // repack so neighbours reflow live
     }
   }
   function endGesture(e) {
