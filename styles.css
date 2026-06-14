@@ -367,8 +367,8 @@ em { font-style: normal; color: var(--oxblood); }
 .caps__col li { padding: 0.18rem 0; color: var(--ink); opacity: 0.85; }
 
 /* ---------- ABOUT ---------- */
-.about { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(1.5rem, 4vw, 4rem); margin-top: 1.4rem; }
-.about__lead { font-size: clamp(1.3rem, 2.6vw, 2rem); line-height: 1.3; letter-spacing: -0.01em; }
+.about { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(1.5rem, 4vw, 4rem); align-items: start; }
+.about__lead { font-size: clamp(1.1rem, 2.1vw, 1.6rem); line-height: 1.35; letter-spacing: -0.01em; margin-top: 0.9rem; }
 .about__school { font-family: "Archivo", sans-serif; font-weight: 800; font-size: 1.25rem; margin-top: 1.1rem; }
 .about__edu .caps__label + .about__school { margin-top: 0.4rem; }
 .about__meta { color: var(--ink); opacity: 0.7; font-size: 0.92rem; margin-top: 0.2rem; }
@@ -384,6 +384,12 @@ em { font-style: normal; color: var(--oxblood); }
   margin: 0.7rem 0 0.5rem;
 }
 .wordlist i { font-style: normal; color: var(--gray); font-weight: 500; margin: 0 0.15em; }
+.client-link {
+  color: inherit; text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: color 0.16s ease, border-color 0.16s ease;
+}
+.client-link:hover { color: var(--oxblood); border-bottom-color: var(--oxblood); }
 
 /* ---------- CONTACT ---------- */
 .contact__mail {

@@ -257,8 +257,10 @@
     const startW = +el.dataset.w || 1, startH = +el.dataset.h || 1;
     const sx = e.clientX, sy = e.clientY;
     el.classList.add("resizing");
-    try { el.setPointerCapture(e.pointerId); } catch (_) {}
+    document.body.style.cursor = "nwse-resize";
 
+    // Track moves on the window so the drag survives the cursor leaving the
+    // (small) tile as it grows — binding to the tile alone loses the events.
     const move = (ev) => {
       const dw = Math.round((ev.clientX - sx) / (cellW + colGap));
       const dh = Math.round((ev.clientY - sy) / (rowH + rowGap));
@@ -271,11 +273,12 @@
     const up = () => {
       el.classList.remove("resizing");
       el.dataset.dragged = "1";                       // swallow the trailing click
-      el.removeEventListener("pointermove", move);
-      el.removeEventListener("pointerup", up);
+      document.body.style.cursor = "";
+      window.removeEventListener("pointermove", move);
+      window.removeEventListener("pointerup", up);
     };
-    el.addEventListener("pointermove", move);
-    el.addEventListener("pointerup", up, { once: true });
+    window.addEventListener("pointermove", move);
+    window.addEventListener("pointerup", up);
   }
 
   // re-pack when the column count changes (responsive breakpoints)
