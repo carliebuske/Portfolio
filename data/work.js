@@ -110,7 +110,7 @@ const WORK = [
     categories: ["experiential", "social"],
     tone: "almond",
     poster: "assets/jeans/fire-racks.jpg",
-    reel: "",
+    reel: "https://vimeo.com/1201115528",
     gallery: [
       "assets/jeans/dinner.jpg",
       "assets/jeans/table.png",

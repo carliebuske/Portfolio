@@ -1,4 +1,4 @@
-# Carlie Buske — Portfolio
+# Carlie Nicole — Portfolio
 
 Personal portfolio for an Experiential Producer & Creative Director.
 Warm Swiss editorial: cream ground, ink type, surgical oxblood accent.

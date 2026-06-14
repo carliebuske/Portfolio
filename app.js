@@ -32,6 +32,25 @@
 
   let activeFilter = "All";
 
+  /* ---------- reel helpers (Vimeo iframe or local <video>) ---------- */
+  function vimeoId(url) {
+    const m = String(url || "").match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    return m ? m[1] : null;
+  }
+  // bg=true → silent autoplay loop, no chrome (for tiles). bg=false → full player.
+  function reelEmbed(reel, bg) {
+    const id = vimeoId(reel);
+    if (id) {
+      const q = bg
+        ? "background=1&autoplay=1&loop=1&muted=1"
+        : "autoplay=1&loop=1&title=0&byline=0&portrait=0&dnt=1";
+      return `<iframe src="https://player.vimeo.com/video/${id}?${q}" allow="autoplay; fullscreen; picture-in-picture" frameborder="0"></iframe>`;
+    }
+    return bg
+      ? `<video autoplay muted loop playsinline src="${reel}"></video>`
+      : `<video autoplay loop playsinline controls src="${reel}"></video>`;
+  }
+
   /* ---------- poster background ---------- */
   function posterStyle(item) {
     if (item.poster) return `background-image:url('${item.poster}')`;
@@ -60,9 +79,8 @@
     }
 
     const badge = item.inDev ? `<span class="tile__badge">In development</span>` : "";
-    const video = item.reel
-      ? `<video class="tile__video" muted loop playsinline preload="none" data-src="${item.reel}"></video>`
-      : "";
+    if (item.reel) el.dataset.reel = item.reel;
+    const media = item.reel ? `<div class="tile__media"></div>` : "";
     const bundle = item.bundle
       ? `<div class="tile__bundle"><b>Talent</b>${item.bundle
           .map((b) => `<span>${b.name}${b.note ? ` <i>· ${b.note}</i>` : ""}</span>`)
@@ -71,7 +89,7 @@
 
     el.innerHTML =
       `<div class="tile__poster" style="${posterStyle(item)}"></div>
-       ${video}
+       ${media}
        ${bundle}
        ${badge}
        <div class="tile__meta">
@@ -90,19 +108,26 @@
     return el;
   }
 
-  /* ---------- video helpers ---------- */
+  /* ---------- tile reel play/stop (lazy: media built on first play) ---------- */
   function playTile(el) {
-    const v = el.querySelector("video");
-    if (!v) return;
-    if (!v.src && v.dataset.src) v.src = v.dataset.src;
+    const reel = el.dataset.reel;
+    if (!reel) return;
+    const media = el.querySelector(".tile__media");
+    if (!media) return;
+    if (!media.innerHTML) media.innerHTML = reelEmbed(reel, true);
+    else {
+      const v = media.querySelector("video");
+      if (v) v.play().catch(() => {});
+    }
     el.classList.add("playing");
-    v.play().catch(() => {});
   }
   function stopTile(el) {
-    const v = el.querySelector("video");
-    if (!v) return;
     el.classList.remove("playing");
-    v.pause();
+    const media = el.querySelector(".tile__media");
+    if (!media) return;
+    const v = media.querySelector("video");
+    if (v) v.pause();
+    else media.innerHTML = ""; // tear down the Vimeo iframe so it stops
   }
 
   /* mobile: autoplay when scrolled into view */
@@ -172,7 +197,7 @@
 
   function openQuickLook(item) {
     const reel = item.reel
-      ? `<video src="${item.reel}" autoplay muted loop playsinline controls></video>`
+      ? reelEmbed(item.reel, false)
       : item.poster
       ? `<img src="${item.poster}" alt="${item.title}" />`
       : "Reel coming soon";
@@ -200,7 +225,7 @@
     openModal(
       `<div class="ql__inner" style="padding-top:2.2rem">
          <h2 class="ql__title">About</h2>
-         <p class="ql__rolemeta">Carlie Buske · New York, NY</p>
+         <p class="ql__rolemeta">Carlie Nicole · New York, NY</p>
          <p class="ql__story">A creative operator who builds the experience and the
            systems that run it. Nine years across experiential production, creative
            direction, and innovation. Currently leading creative &amp; AI work for

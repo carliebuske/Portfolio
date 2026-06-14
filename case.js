@@ -13,10 +13,21 @@
     return;
   }
 
-  document.title = `${item.title} — Carlie Buske`;
+  document.title = `${item.title} — Carlie Nicole`;
+
+  const vimeoId = (url) => {
+    const m = String(url || "").match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    return m ? m[1] : null;
+  };
+  function reelEmbed(url) {
+    const id = vimeoId(url);
+    return id
+      ? `<iframe src="https://player.vimeo.com/video/${id}?autoplay=1&loop=1&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" frameborder="0"></iframe>`
+      : `<video src="${url}" autoplay loop playsinline controls></video>`;
+  }
 
   const reel = item.reel
-    ? `<video src="${item.reel}" autoplay muted loop playsinline controls></video>`
+    ? reelEmbed(item.reel)
     : item.poster
     ? `<img src="${item.poster}" alt="${item.title}" />`
     : "Full-bleed reel — coming soon";

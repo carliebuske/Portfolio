@@ -1,5 +1,5 @@
 /* =========================================================================
-   Carlie Buske — warm Swiss editorial
+   Carlie Nicole — warm Swiss editorial
    Light cream ground · ink type · surgical oxblood accent
    ========================================================================= */
 
@@ -206,7 +206,7 @@ em { font-style: normal; color: var(--oxblood); }
 .tile {
   position: relative;
   overflow: hidden;
-  border-radius: 7px;          /* a hair of softness; still editorial, not a Pinterest card */
+  border-radius: 14px;         /* rounded board covers */
   cursor: pointer;
   background: var(--ink);
   user-select: none;
@@ -234,14 +234,15 @@ em { font-style: normal; color: var(--oxblood); }
   background-size: cover;
   background-position: center;
 }
-.tile__video {
+.tile__media {
   position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.tile.playing .tile__video { opacity: 1; }
+.tile__media video, .tile__media iframe {
+  width: 100%; height: 100%; object-fit: cover; border: 0; display: block;
+}
+.tile.playing .tile__media { opacity: 1; }
 
 .tile__meta {
   position: absolute;
