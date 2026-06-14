@@ -76,7 +76,7 @@
        ${badge}
        <div class="tile__meta">
          <p class="tile__title">${item.title}</p>
-         <p class="tile__sub">${item.client} · ${item.dates}</p>
+         <p class="tile__sub">${[item.client, item.dates].filter(Boolean).join(" · ")}</p>
        </div>`;
 
     // hover (desktop) → play muted loop
@@ -173,6 +173,8 @@
   function openQuickLook(item) {
     const reel = item.reel
       ? `<video src="${item.reel}" autoplay muted loop playsinline controls></video>`
+      : item.poster
+      ? `<img src="${item.poster}" alt="${item.title}" />`
       : "Reel coming soon";
     const bundle = item.bundle
       ? `<div class="ql__bundle">${item.bundle
@@ -185,7 +187,7 @@
        <div class="ql__inner">
          ${indev}
          <h2 class="ql__title">${item.title}</h2>
-         <p class="ql__rolemeta">${item.client} · ${item.role} · ${item.dates}</p>
+         <p class="ql__rolemeta">${[item.client, item.role, item.dates].filter(Boolean).join(" · ")}</p>
          <p class="ql__story">${item.story}</p>
          ${bundle}
          <p class="ql__result">${item.result}</p>

@@ -16,7 +16,8 @@
  *   result     one headline result metric
  *   tone       palette key for the placeholder poster (see TONES in styles)
  *   poster     OPTIONAL image path — when set, overrides the tone placeholder
- *   reel       OPTIONAL embed URL (Vimeo/Mux) — leave "" until assets land
+ *   reel       OPTIONAL embed URL (Vimeo/Mux) or local .mp4 — leave "" until assets land
+ *   gallery    OPTIONAL array of image paths — rendered as a grid on the case page
  *   bundle     OPTIONAL [{name, note}] — talent/program names revealed on hover + modal
  *   inDev      OPTIONAL true — frames the case as in-development
  *
@@ -105,13 +106,25 @@ const WORK = [
     title: "Farm to Turntable",
     client: "Jean's × Les Enfants du Marché",
     role: "Producer · Hospitality",
-    dates: "May 2026 (soon to be a monthly series)",
+    dates: "",
     categories: ["experiential", "social"],
     tone: "almond",
-    poster: "",
+    poster: "assets/jeans/fire-racks.jpg",
     reel: "",
+    gallery: [
+      "assets/jeans/dinner.jpg",
+      "assets/jeans/table.png",
+      "assets/jeans/produce.jpg",
+      "assets/jeans/fire-prep.jpg",
+      "assets/jeans/plates.jpg",
+      "assets/jeans/chef.jpg",
+      "assets/jeans/centerpiece.png",
+      "assets/jeans/merch.jpg",
+      "assets/jeans/place-card.jpg",
+      "assets/jeans/tractor.jpg",
+    ],
     story:
-      "Farm to Turntable — De La Ferme Aux Platines — at Jean's farm in New Hope, PA, with French friends from Les Enfants du Marché. A field dinner that turns into a DJ set: produced end to end, menu to music.",
+      "Farm to Turntable — De La Ferme Aux Platines — at Jean's farm in New Hope, PA, with French friends from Les Enfants du Marché. A field dinner that turns into a DJ set: produced end to end, menu to music. Debuted May 2026, with a monthly series to follow.",
     result: "Inaugural farm dinner × DJ series",
   },
   {
