@@ -214,44 +214,44 @@
   /* ---------- press-and-hold drag to rearrange ----------
      Long-press (180ms) lifts a tile; pointermove swaps it past others.
      A plain tap/click is preserved for opening the quick-look. */
-  const HOLD_MS = 180;
-  let holdTimer = null, lifted = null, startX = 0, startY = 0;
+  const HOLD_MS = 160;
+  let holdTimer = null, lifted = null, startX = 0, startY = 0, pid = null;
+
+  // While a tile is lifted, block page scroll on touch (touch-action alone
+  // can't do this mid-gesture). Must be a non-passive listener.
+  document.addEventListener("touchmove", (e) => { if (lifted) e.preventDefault(); }, { passive: false });
 
   function enableDrag() {
-    [...board.children].forEach((el) => {
-      el.addEventListener("pointerdown", onDown);
-    });
+    [...board.children].forEach((el) => el.addEventListener("pointerdown", onDown));
   }
   function onDown(e) {
     if (e.button === 1 || e.button === 2) return;
     const el = e.currentTarget;
     el.dataset.dragged = "0";          // clear any stale flag from a prior drag
-    startX = e.clientX; startY = e.clientY;
-    holdTimer = setTimeout(() => lift(el, e.pointerId), HOLD_MS);
-    el.addEventListener("pointerup", cancelHold, { once: true });
-    el.addEventListener("pointercancel", cancelHold, { once: true });
-    el.addEventListener("pointermove", maybeCancelOnMove);
+    startX = e.clientX; startY = e.clientY; pid = e.pointerId;
+    holdTimer = setTimeout(() => lift(el), HOLD_MS);
+    el.addEventListener("pointermove", preLiftMove);
+    el.addEventListener("pointerup", endGesture, { once: true });
+    el.addEventListener("pointercancel", endGesture, { once: true });
   }
-  function maybeCancelOnMove(e) {
+  // Movement before the hold fires = a scroll/tap, not a drag → abort the lift.
+  function preLiftMove(e) {
     if (lifted) return;
-    if (Math.hypot(e.clientX - startX, e.clientY - startY) > 8) cancelHold();
+    if (Math.hypot(e.clientX - startX, e.clientY - startY) > 10) clearTimeout(holdTimer);
   }
-  function cancelHold() {
-    clearTimeout(holdTimer); holdTimer = null;
-  }
-  function lift(el, pointerId) {
+  function lift(el) {
     lifted = el;
     el.classList.add("lifted");
-    el.setPointerCapture(pointerId);
+    try { el.setPointerCapture(pid); } catch (_) {}
     el.addEventListener("pointermove", onDrag);
-    el.addEventListener("pointerup", drop, { once: true });
-    if (navigator.vibrate) navigator.vibrate(10);
+    if (navigator.vibrate) navigator.vibrate(12);
+    resetBtn.hidden = false;           // surface reset once a drag begins
   }
   function onDrag(e) {
     if (!lifted) return;
     const target = document
       .elementsFromPoint(e.clientX, e.clientY)
-      .find((n) => n.classList && n.classList.contains("tile") && n !== lifted);
+      .find((n) => n !== lifted && n.classList && n.classList.contains("tile"));
     if (target) {
       const tiles = [...board.children];
       const li = tiles.indexOf(lifted), ti = tiles.indexOf(target);
@@ -259,13 +259,16 @@
       else board.insertBefore(lifted, target);
     }
   }
-  function drop() {
-    if (!lifted) return;
-    lifted.classList.remove("lifted");
-    lifted.removeEventListener("pointermove", onDrag);
-    lifted.dataset.dragged = "1";       // suppress the click that follows
-    lifted = null;
-    resetBtn.hidden = false;            // surface reset once the board moved
+  function endGesture(e) {
+    clearTimeout(holdTimer);
+    const el = e.currentTarget;
+    el.removeEventListener("pointermove", preLiftMove);
+    el.removeEventListener("pointermove", onDrag);
+    if (lifted) {
+      lifted.classList.remove("lifted");
+      lifted.dataset.dragged = "1";    // suppress the click that follows a drag
+      lifted = null;
+    }
   }
 
   resetBtn.addEventListener("click", () => {

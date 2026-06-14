@@ -190,13 +190,18 @@ em { font-style: normal; color: var(--oxblood); }
 }
 
 /* ---------- MOODBOARD GRID ----------
-   Structured 4-col grid; size varies by tier; dense packing fills gaps. */
+   The board spreads the FULL desktop width (varied tile sizes, board feel);
+   the section's label/filters/hint stay in the centered text column. */
+.section--work { max-width: none; padding-left: 0; padding-right: 0; }
+.work__inner { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); }
+
 .board {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: clamp(120px, 15vw, 200px);
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: clamp(110px, 10vw, 180px);
   grid-auto-flow: dense;
   gap: var(--gap);
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
 .tile {
   position: relative;
@@ -439,6 +444,10 @@ em { font-style: normal; color: var(--oxblood); }
 .ql__indev { display:inline-block; margin-bottom: 0.8rem; background: var(--oxblood); color: var(--cream); font-family: "Space Mono", monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.55rem; border-radius: 3px; }
 
 /* ---------- RESPONSIVE ---------- */
+@media (max-width: 1100px) {
+  .board { grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(120px, 13vw, 190px); }
+}
+
 @media (max-width: 860px) {
   .nav { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
   .nav__links { gap: 0.9rem; flex-wrap: wrap; }
