@@ -275,7 +275,10 @@ em { font-style: normal; color: var(--oxblood); }
   background: linear-gradient(to top, rgba(28,27,25,0.78), rgba(28,27,25,0));
   color: var(--cream);
   pointer-events: none;
+  transition: opacity 0.25s ease;
 }
+/* Hover: clear the title/info — just the reel (or the bare image). */
+.tile:hover .tile__meta { opacity: 0; }
 .tile__title {
   font-family: "Archivo", sans-serif;
   font-weight: 800;
