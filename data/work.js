@@ -34,7 +34,7 @@ const WORK = [
     title: "Pinterest × Gemini",
     client: "Google × Pinterest",
     role: "Creative Lead",
-    dates: "2024 — Present",
+    dates: "2026",
     categories: ["experiential", "social"],
     tone: "oxblood",
     poster: "",
@@ -130,7 +130,13 @@ const WORK = [
     categories: ["experiential", "social", "ctv"],
     tone: "olive",
     poster: "",
-    reel: "",
+    reel: "https://vimeo.com/1201294355",
+    clips: [
+      "https://vimeo.com/1201294311",
+      "https://vimeo.com/1201294313",
+      "https://vimeo.com/1201294314",
+      "https://vimeo.com/1201294312",
+    ],
     bundle: [
       { name: "Evan Ross Katz", note: "superfan-creator" },
       { name: "Nicholas Duvernay", note: "show talent" },

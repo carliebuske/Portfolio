@@ -25,6 +25,13 @@
       ? `<iframe src="https://player.vimeo.com/video/${id}?autoplay=1&loop=1&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" frameborder="0"></iframe>`
       : `<video src="${url}" autoplay loop playsinline controls></video>`;
   }
+  // Secondary clips: no autoplay (several on screen), player chrome on.
+  function clipEmbed(url) {
+    const id = vimeoId(url);
+    return id
+      ? `<iframe src="https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0&dnt=1" allow="fullscreen; picture-in-picture" frameborder="0" loading="lazy"></iframe>`
+      : `<video src="${url}" controls playsinline></video>`;
+  }
 
   const reel = item.reel
     ? reelEmbed(item.reel)
@@ -46,6 +53,12 @@
     ? `<div class="case__gallery">${item.gallery
         .map((src) => `<img src="${src}" alt="${item.title}" loading="lazy" />`)
         .join("")}</div>`
+    : "";
+  const clips = item.clips && item.clips.length
+    ? `<section class="case__section" style="max-width:none">
+         <h2 class="case__h">The films</h2>
+         <div class="case__clips">${item.clips.map((c) => `<div class="case__clip">${clipEmbed(c)}</div>`).join("")}</div>
+       </section>`
     : "";
   const meta = item.caseMeta || [item.client, item.role, item.dates].filter(Boolean).join(" · ");
 
@@ -93,5 +106,6 @@
      ${sections}
      ${results}
      ${awards}
+     ${clips}
      ${gallery}`;
 })();

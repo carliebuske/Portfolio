@@ -30,6 +30,10 @@
     .case__awards { margin:0; padding:0; list-style:none; }
     .case__awards li { padding:0.55rem 0; border-bottom:1px solid var(--hairline); line-height:1.4; }
     .case__more { margin-top:1rem; font-size:0.95rem; color:var(--ink); opacity:0.7; line-height:1.5; }
+    .case__clips { display:grid; grid-template-columns:repeat(2,1fr); gap:var(--gap); }
+    .case__clip { aspect-ratio:16/9; background:var(--ink); border-radius:14px; overflow:hidden; }
+    .case__clip iframe, .case__clip video { width:100%; height:100%; border:0; display:block; }
+    @media (max-width:560px){ .case__clips { grid-template-columns:1fr; } }
     @media (max-width:560px){ .case__results { grid-template-columns:1fr; } }
     /* Pinterest-style masonry: natural image ratios, no cropping */
     .case__gallery { margin-top:2.5rem; column-count:3; column-gap:var(--gap); }
