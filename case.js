@@ -53,7 +53,20 @@
     ? reelEmbed(item.reel)
     : item.poster
     ? `<img src="${item.poster}" alt="${item.title}" />`
+    : item.liveApp
+    ? ""
     : "Full-bleed reel — coming soon";
+  // Live, interactive app embed (e.g. Forma Curate) — replaces the reel hero.
+  const reelBlock = item.liveApp ? "" : `<div class="case__reel">${reel}</div>`;
+  const live = item.liveApp
+    ? `<section class="case__section" style="max-width:none">
+         <div class="case__livebar">
+           <span class="case__livetag">● Live demo · fully interactive</span>
+           <a class="case__launch" href="${item.liveApp}" target="_blank" rel="noopener">Launch fullscreen ↗</a>
+         </div>
+         <div class="case__live"><iframe src="${item.liveApp}" title="${item.title} — live app" loading="lazy"></iframe></div>
+       </section>`
+    : "";
   const indev = item.inDev ? `<span class="case__indev">In development</span>` : "";
   const bundle = item.bundle
     ? `<div class="ql__bundle" style="margin-top:1.4rem">${item.bundle
@@ -114,12 +127,13 @@
 
   root.innerHTML =
     `<a class="case__back" href="index.html#work">← Back to work</a>
-     <div class="case__reel">${reel}</div>
+     ${reelBlock}
      ${indev}
      <h1 class="case__title">${item.title}</h1>
      <p class="case__meta">${meta}</p>
      <p class="case__story">${item.story}</p>
      ${bundle}
+     ${live}
      ${galleryTop}
      ${sections}
      ${results}

@@ -155,9 +155,10 @@ const WORK = [
     poster: "",
     reel: "",
     inDev: true,
+    liveApp: "forma/index.html",
     story:
-      "An AI production tool for planning, budgeting, and running creative operations, the proof of the “systems that run it” half of the pitch.",
-    result: "In active development",
+      "Forma Curate is a studio operations tool I'm building: a project manager, planner, and calendar you can journal on. Projects, events, contacts, and receipts in one place, the proof of the “systems that run it” half of the pitch. Open the case page to try the live app.",
+    result: "In active development · live interactive demo",
   },
   {
     id: "swatch-olive",

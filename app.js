@@ -394,7 +394,7 @@
          <p class="ql__story">${item.story}</p>
          ${bundle}
          <p class="ql__result">${item.result}</p>
-         <a class="ql__cta" href="case.html?id=${item.id}">Full case →</a>
+         <a class="ql__cta" href="case.html?id=${item.id}">${item.liveApp ? "Open the live app →" : "Full case →"}</a>
        </div>`
     );
   }
