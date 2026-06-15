@@ -32,9 +32,13 @@
 
   let activeFilter = "All";
 
-  /* ---------- reel helpers (Vimeo iframe or local <video>) ---------- */
+  /* ---------- reel helpers (Vimeo / YouTube iframe or local <video>) ---------- */
   function vimeoId(url) {
     const m = String(url || "").match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    return m ? m[1] : null;
+  }
+  function youtubeId(url) {
+    const m = String(url || "").match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/);
     return m ? m[1] : null;
   }
   // bg=true → silent autoplay loop, no chrome (for tiles). bg=false → full player.
@@ -45,6 +49,13 @@
         ? "background=1&autoplay=1&loop=1&muted=1"
         : "autoplay=1&loop=1&title=0&byline=0&portrait=0&dnt=1";
       return `<iframe src="https://player.vimeo.com/video/${id}?${q}" allow="autoplay; fullscreen; picture-in-picture" frameborder="0"></iframe>`;
+    }
+    const yt = youtubeId(reel);
+    if (yt) {
+      const q = bg
+        ? `autoplay=1&loop=1&mute=1&controls=0&playsinline=1&playlist=${yt}`
+        : `autoplay=1&loop=1&playlist=${yt}`;
+      return `<iframe src="https://www.youtube.com/embed/${yt}?${q}" allow="autoplay; fullscreen; picture-in-picture" frameborder="0"></iframe>`;
     }
     return bg
       ? `<video autoplay muted loop playsinline src="${reel}"></video>`

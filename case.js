@@ -19,11 +19,18 @@
     const m = String(url || "").match(/vimeo\.com\/(?:video\/)?(\d+)/);
     return m ? m[1] : null;
   };
+  const youtubeId = (url) => {
+    const m = String(url || "").match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/);
+    return m ? m[1] : null;
+  };
   function reelEmbed(url) {
     const id = vimeoId(url);
-    return id
-      ? `<iframe src="https://player.vimeo.com/video/${id}?autoplay=1&loop=1&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" frameborder="0"></iframe>`
-      : `<video src="${url}" autoplay loop playsinline controls></video>`;
+    if (id)
+      return `<iframe src="https://player.vimeo.com/video/${id}?autoplay=1&loop=1&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" frameborder="0"></iframe>`;
+    const yt = youtubeId(url);
+    if (yt)
+      return `<iframe src="https://www.youtube.com/embed/${yt}?autoplay=1&loop=1&playlist=${yt}" allow="autoplay; fullscreen; picture-in-picture" frameborder="0"></iframe>`;
+    return `<video src="${url}" autoplay loop playsinline controls></video>`;
   }
   // Secondary clips: rendered via Vimeo's responsive player (case.js inits it
   // after mount) so each clip fills at its OWN aspect ratio — no black bars,
