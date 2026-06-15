@@ -42,7 +42,40 @@
         .map((src) => `<img src="${src}" alt="${item.title}" loading="lazy" />`)
         .join("")}</div>`
     : "";
-  const meta = [item.client, item.role, item.dates].filter(Boolean).join(" · ");
+  const meta = item.caseMeta || [item.client, item.role, item.dates].filter(Boolean).join(" · ");
+
+  // Narrative sections (opportunity / idea / execution / role …)
+  const sections = (item.sections || [])
+    .map((s) => {
+      const list = s.list && s.list.length
+        ? `<ul class="case__list">${s.list.map((li) => `<li>${li}</li>`).join("")}</ul>`
+        : "";
+      return `<section class="case__section">
+                <h2 class="case__h">${s.h}</h2>
+                ${s.p ? `<p class="case__body">${s.p}</p>` : ""}
+                ${list}
+              </section>`;
+    })
+    .join("");
+
+  // Results — a metric grid when provided, else the single headline result
+  const results = item.results && item.results.length
+    ? `<section class="case__section">
+         <h2 class="case__h">The results</h2>
+         <ul class="case__results">${item.results.map((r) => `<li>${r}</li>`).join("")}</ul>
+       </section>`
+    : item.result
+    ? `<p class="case__result">${item.result}</p>`
+    : "";
+
+  // Recognition — wins + additional nods
+  const awards = item.awards
+    ? `<section class="case__section">
+         <h2 class="case__h">Recognition</h2>
+         <ul class="case__awards">${(item.awards.wins || []).map((w) => `<li>${w}</li>`).join("")}</ul>
+         ${item.awards.more ? `<p class="case__more">${item.awards.more}</p>` : ""}
+       </section>`
+    : "";
 
   root.innerHTML =
     `<a class="case__back" href="index.html#work">← Back to work</a>
@@ -52,6 +85,8 @@
      <p class="case__meta">${meta}</p>
      <p class="case__story">${item.story}</p>
      ${bundle}
-     <p class="case__result">${item.result}</p>
+     ${sections}
+     ${results}
+     ${awards}
      ${gallery}`;
 })();
