@@ -39,6 +39,7 @@ const WORK = [
     tone: "oxblood",
     poster: "",
     reel: "",
+    comingSoon: true,
     story:
       "The back-to-school partnership pairing Pinterest discovery with Gemini. Leading creative and the production systems behind a multi-surface program.",
     result: "Flagship partnership · multi-surface launch",
@@ -55,6 +56,10 @@ const WORK = [
     tone: "ink",
     poster: "",
     reel: "",
+    bundle: [
+      { name: "Complex Sneakers", note: "Jimmy Butler × Pixel" },
+      { name: "Complex Puppies", note: "× Pixel" },
+    ],
     story:
       "The post-keynote celebration for the Made by Google launch — experience design, fabrication oversight, and on-site operations end to end.",
     result: "Hero launch moment for the year's flagship event",
@@ -134,27 +139,22 @@ const WORK = [
       "We didn't interrupt the White Lotus fandom — we joined it. An 8-part miniseries that put a Pixel in the hands of the show's most renowned superfan, turning HBO's most-anticipated premiere into a Pixel + Gemini story. 108.6M impressions. A Clio.",
     sections: [
       {
-        h: "The opportunity",
-        p: "The White Lotus is defined by luxury, elevated humor, and picturesque escapism — viewership up more than 50% from Season 1 to Season 2, with Season 3 positioned as HBO's most-anticipated premiere of early 2025. The brief: build a cross-platform, White Lotus–inspired brand story that captured fan attention and drove consideration for Pixel with Gemini.",
-      },
-      {
         h: "The idea",
-        p: "Rather than interrupt the fandom, we joined it. We handed the show's most renowned superfan-creator, Evan Ross Katz, a miniseries of his own and put a Pixel in his hands — casting the phone and Gemini as the ultimate travel companion: planning itineraries, sourcing last-minute outfits, and capturing the best photos.",
+        p: "Rather than interrupt the White Lotus fandom, we joined it — handing the show's most renowned superfan, Evan Ross Katz, a miniseries of his own with a Pixel in hand, casting the phone and Gemini as the ultimate travel companion.",
       },
       {
-        h: "The execution",
-        p: "An 8-part miniseries with Evan Ross Katz and show talent Nicholas Duvernay, exploring White Lotus–inspired experiences and bringing fans along for the trip. Live across Max, Instagram, and TikTok.",
+        h: "What we made",
+        p: "An 8-part miniseries with Evan Ross Katz and show talent Nicholas Duvernay — live across Max, Instagram, and TikTok.",
         list: [
           "Tech exclusivity with the franchise",
-          "Season 1–3 title sponsorship on Max",
-          "Finale takeover",
+          "Season 1–3 title sponsorship + finale takeover on Max",
           "Original social creator content",
           "Interactive ad units",
         ],
       },
       {
         h: "My role",
-        p: "Led creative and innovation on the partnership — concept, talent strategy, and cross-platform production oversight, from the miniseries idea through rollout across Max, Instagram, and TikTok.",
+        p: "Creative & innovation lead — concept, talent strategy, and cross-platform production from idea through rollout.",
       },
     ],
     results: [
@@ -218,32 +218,10 @@ const WORK = [
     result: "Talent-led shopping activations",
   },
   {
-    id: "complex-google",
-    type: "work",
-    tier: 2,
-    title: "Complex × Google",
-    client: "Complex × Google",
-    role: "Creative · Production",
-    dates: "2024 — 2026",
-    categories: ["publisher", "social", "ctv"],
-    tone: "deepox",
-    poster: "",
-    reel: "",
-    bundle: [
-      { name: "GOAT Talk", note: "Wyclef Jean × Search", id: "goat-talk-search" },
-      { name: "Complex Sneakers", note: "Jimmy Butler × Pixel" },
-      { name: "Complex Puppies", note: "× Pixel" },
-    ],
-    story:
-      "A run of Complex franchises reimagined as Google product showcases — GOAT Talk, Sneakers, and Puppies.",
-    result: "Three franchise integrations",
-  },
-  {
     id: "goat-talk-search",
     type: "work",
-    hidden: true,
     tier: 2,
-    title: "Google Search × Complex's GOAT Talk",
+    title: "GOAT Talk × Google Search",
     client: "Google Search × Complex",
     caseMeta: "Google Search (Education) × Complex · feat. Wyclef Jean & his daughter Claudinelle · Q4 2025",
     role: "Creative & Innovation Lead",

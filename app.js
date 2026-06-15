@@ -85,6 +85,7 @@
     }
 
     const badge = item.inDev ? `<span class="tile__badge">In development</span>` : "";
+    const coming = item.comingSoon ? `<div class="tile__coming"><span>Coming soon</span></div>` : "";
     if (item.reel) el.dataset.reel = item.reel;
     const media = item.reel ? `<div class="tile__media"></div>` : "";
     const bundle = item.bundle
@@ -97,6 +98,7 @@
       `<div class="tile__poster" style="${posterStyle(item)}"></div>
        ${media}
        ${bundle}
+       ${coming}
        ${badge}
        <div class="tile__meta">
          <p class="tile__title">${item.title}</p>
