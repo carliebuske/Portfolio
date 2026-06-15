@@ -258,7 +258,6 @@ const WORK = [
     clips: ["https://vimeo.com/1201304028"],
     gallery: [
       "assets/olympics/leslie-gemini.jpg",
-      "assets/olympics/gemini-captions.jpg",
     ],
     bundle: [{ name: "Leslie Jones", note: "host" }],
     story:
@@ -292,10 +291,10 @@ const WORK = [
     tone: "blue",
     poster: "assets/olympics/OLYMPICSUS9.png",
     reel: "https://vimeo.com/1201304022",
-    clips: ["https://vimeo.com/1201304025"],
     gallery: [
       "assets/olympics/cafe-coffee.jpg",
       "assets/olympics/lens.jpg",
+      "assets/olympics/gemini-captions.jpg",
       "assets/olympics/team-usa-card.jpg",
       "assets/olympics/athlete-phone.jpg",
       "assets/olympics/monument.jpg",
@@ -570,15 +569,15 @@ const WORK = [
     dates: "2019",
     categories: ["experiential"],
     tone: "almond",
-    poster: "assets/vrbo/vrbo1.jpeg",
+    poster: "assets/vrbo/vrbo7.jpeg",
     reel: "https://vimeo.com/381546277?fl=pl&fe=cm",
     gallery: [
+      "assets/vrbo/vrbo1.jpeg",
       "assets/vrbo/vrbo2.jpeg",
       "assets/vrbo/vrbo3.jpeg",
       "assets/vrbo/vrbo4.jpeg",
       "assets/vrbo/vrbo5.jpeg",
       "assets/vrbo/vrbo6.jpeg",
-      "assets/vrbo/vrbo7.jpeg",
       "assets/vrbo/vrbo8.jpeg",
       "assets/vrbo/vrbo9.jpeg",
       "assets/vrbo/vrbo10.jpeg",
@@ -624,6 +623,7 @@ const WORK = [
   {
     id: "salesforce",
     type: "work",
+    hidden: true,
     tier: 3,
     title: "Salesforce",
     client: "Salesforce",
