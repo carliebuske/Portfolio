@@ -272,13 +272,16 @@ em { font-style: normal; color: var(--oxblood); }
   position: absolute;
   left: 0; right: 0; bottom: 0;
   padding: 0.85rem 0.95rem;
-  background: linear-gradient(to top, rgba(28,27,25,0.78), rgba(28,27,25,0));
+  background: linear-gradient(to top, rgba(28,27,25,0.85), rgba(28,27,25,0));
   color: var(--cream);
   pointer-events: none;
+  opacity: 0;
   transition: opacity 0.25s ease;
 }
-/* Hover: clear the title/info — just the reel (or the bare image). */
-.tile:hover .tile__meta { opacity: 0; }
+/* Clean image at rest; reveal the title/info on hover (desktop)
+   or while the tile crosses the screen's middle (mobile). */
+.tile:hover .tile__meta,
+.tile.in-view .tile__meta { opacity: 1; }
 .tile__title {
   font-family: "Archivo", sans-serif;
   font-weight: 800;

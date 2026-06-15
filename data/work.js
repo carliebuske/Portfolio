@@ -57,7 +57,7 @@ const WORK = [
     tone: "ink",
     poster: "assets/afterparty/title-card.jpg",
     posterPos: "left center",
-    reel: "",
+    reel: "https://vimeo.com/1201441559",
     gallery: [
       "assets/afterparty/keke.jpg",
       "assets/afterparty/drag-game.jpg",
@@ -253,7 +253,7 @@ const WORK = [
     dates: "2024",
     categories: ["ctv"],
     tone: "blue",
-    poster: "assets/olympics/OLYMPICS-LESLIE5.jpeg",
+    poster: "assets/olympics/OLYMPICS-LESLIE4.jpeg",
     reel: "https://vimeo.com/1201304029",
     clips: [
       "https://vimeo.com/1201304028",
@@ -261,6 +261,10 @@ const WORK = [
     ],
     gallery: [
       "assets/olympics/leslie-gemini.jpg",
+      "assets/olympics/OLYMPICS-LESLIE1.jpeg",
+      "assets/olympics/OLYMPICS-LESLIE2.jpeg",
+      "assets/olympics/OLYMPICS-LESLIE3.jpeg",
+      "assets/olympics/OLYMPICS-LESLIE5.jpeg",
     ],
     bundle: [{ name: "Leslie Jones", note: "host" }],
     story:

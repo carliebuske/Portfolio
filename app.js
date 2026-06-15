@@ -110,6 +110,7 @@
       });
       bioEl.addEventListener("blur", saveBio);
       el.addEventListener("click", () => openAbout());
+      addResizeGrip(el);
       return el;
     }
 
@@ -145,15 +146,18 @@
       openQuickLook(item);
     });
 
-    // resize grip (desktop only — touch devices reorder via press-and-hold)
-    if (HOVER) {
-      const grip = document.createElement("span");
-      grip.className = "tile__resize";
-      grip.setAttribute("aria-hidden", "true");
-      grip.addEventListener("pointerdown", startResize);
-      el.appendChild(grip);
-    }
+    addResizeGrip(el);
     return el;
+  }
+
+  // resize grip (desktop only — touch devices reorder via press-and-hold)
+  function addResizeGrip(el) {
+    if (!HOVER) return;
+    const grip = document.createElement("span");
+    grip.className = "tile__resize";
+    grip.setAttribute("aria-hidden", "true");
+    grip.addEventListener("pointerdown", startResize);
+    el.appendChild(grip);
   }
 
   /* ---------- tile reel play/stop (lazy: media built on first play) ---------- */
@@ -186,8 +190,14 @@
   const HOVER = matchMedia("(hover: hover)").matches;
   const io = (!HOVER && "IntersectionObserver" in window)
     ? new IntersectionObserver((entries) => {
-        entries.forEach((en) => (en.isIntersecting ? playTile(en.target) : stopTile(en.target)));
-      }, { rootMargin: "-50% 0px -50% 0px", threshold: 0 })
+        entries.forEach((en) => {
+          // reveal title/info while the tile straddles the screen's middle
+          en.target.classList.toggle("in-view", en.isIntersecting);
+          if (en.target.dataset.reel) {
+            en.isIntersecting ? playTile(en.target) : stopTile(en.target);
+          }
+        });
+      }, { rootMargin: "-45% 0px -45% 0px", threshold: 0 })
     : null;
 
   /* ---------- render ---------- */
@@ -196,7 +206,7 @@
     ORDER.forEach((item) => {
       const el = makeTile(item);
       board.appendChild(el);
-      if (io && item.reel) io.observe(el);
+      if (io) io.observe(el);
     });
     enableDrag();
     layout();
