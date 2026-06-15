@@ -433,13 +433,13 @@
   }
 
   resetBtn.addEventListener("click", () => {
-    ORDER = WORK.slice();               // back to curated, tiered order
+    ORDER = WORK.filter((w) => !w.hidden);   // back to curated, tiered order
     render();
     resetBtn.hidden = true;
   });
 
   /* ---------- boot ---------- */
-  let ORDER = WORK.slice();
+  let ORDER = WORK.filter((w) => !w.hidden);   // sub-cases (hidden) stay reachable by URL only
   buildFilters();
   render();
 })();

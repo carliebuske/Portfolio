@@ -230,13 +230,68 @@ const WORK = [
     poster: "",
     reel: "",
     bundle: [
-      { name: "GOAT Talk", note: "Wyclef Jean × Search" },
+      { name: "GOAT Talk", note: "Wyclef Jean × Search", id: "goat-talk-search" },
       { name: "Complex Sneakers", note: "Jimmy Butler × Pixel" },
       { name: "Complex Puppies", note: "× Pixel" },
     ],
     story:
       "A run of Complex franchises reimagined as Google product showcases — GOAT Talk, Sneakers, and Puppies.",
     result: "Three franchise integrations",
+  },
+  {
+    id: "goat-talk-search",
+    type: "work",
+    hidden: true,
+    tier: 2,
+    title: "Google Search × Complex's GOAT Talk",
+    client: "Google Search × Complex",
+    caseMeta: "Google Search (Education) × Complex · feat. Wyclef Jean & his daughter Claudinelle · 2024",
+    role: "Creative & Innovation Lead",
+    dates: "2024",
+    categories: ["social", "publisher", "ctv"],
+    tone: "deepox",
+    poster: "",
+    reel: "",
+    bundle: [
+      { name: "Wyclef Jean", note: "" },
+      { name: "Claudinelle Jean", note: "daughter" },
+    ],
+    story:
+      "A daughter schools her dad — Wyclef Jean — on the future of search. A special edition of Complex's top-performing show that turned the generation gap into the format, teaching students Google's new AI tools through a debate they actually wanted to watch.",
+    sections: [
+      {
+        h: "The brief",
+        p: "Google Search wanted to reach students with its new AI features — AI Mode, AI Overviews, Lens \"Point & Ask,\" and Practice Quizzes — and show how search now handles deeper, layered, follow-up questions. The challenge: make product education feel like culture, not a tutorial.",
+      },
+      {
+        h: "The insight",
+        p: "Reach students through nostalgia and the generation gap. Pair a legacy, broadly-beloved artist with his own recently-graduated daughter, and let the kid school the parent on how search works now. The generational dynamic becomes both the hook and the teaching mechanism — Wyclef was perfect for the multi-gen reach.",
+      },
+      {
+        h: "The idea",
+        p: "A special edition of GOAT Talk — Complex's top-performing show by views — built so the show's signature card-draw debate stays fully intact. We just let key questions \"double-click\" into real, layered uses of Google's Search AI, so the learning happens inside the banter.",
+      },
+      {
+        h: "The execution",
+        p: "Built to live as a full YouTube episode and cut down to run independently on social.",
+        list: [
+          "\"Powered by Google\" cold open",
+          "Three branded segments woven in: AI Mode · Lens Point & Ask · Practice Quizzes",
+          "Animated AI Mode motion graphics",
+          "Google Pixel phones in both guests' hands throughout",
+          "Real use cases on screen — plot summaries via Lens, layered follow-ups in AI Mode, customizable study quizzes",
+        ],
+      },
+      {
+        h: "Why it works",
+        p: "It doesn't fight the format — it uses GOAT Talk's existing DNA. The product surfaces through genuine questions (a movie's plot, an IMAX debate, \"my dorm room is bleak — help\"), so the education lands as conversation, not a demo.",
+      },
+      {
+        h: "My role",
+        p: "Led creative and innovation on the partnership — the generation-gap insight, the format integration that kept GOAT Talk intact, talent strategy, and production oversight from concept through the YouTube and social cutdowns.",
+      },
+    ],
+    result: "Product education that played as culture, not a tutorial",
   },
   {
     id: "swatch-blue",

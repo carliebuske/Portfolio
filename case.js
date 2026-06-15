@@ -34,7 +34,12 @@
   const indev = item.inDev ? `<span class="case__indev">In development</span>` : "";
   const bundle = item.bundle
     ? `<div class="ql__bundle" style="margin-top:1.4rem">${item.bundle
-        .map((b) => `<span>${b.name}${b.note ? ` <i>· ${b.note}</i>` : ""}</span>`)
+        .map((b) => {
+          const inner = `${b.name}${b.note ? ` <i>· ${b.note}</i>` : ""}`;
+          return b.id
+            ? `<a class="ql__bundlelink" href="case.html?id=${b.id}">${inner} →</a>`
+            : `<span>${inner}</span>`;
+        })
         .join("")}</div>`
     : "";
   const gallery = item.gallery && item.gallery.length

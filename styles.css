@@ -501,6 +501,14 @@ em { font-style: normal; color: var(--oxblood); }
 .ql__bundle { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .ql__bundle span { border: 1px solid var(--hairline); border-radius: 999px; padding: 0.3rem 0.7rem; font-size: 0.82rem; }
 .ql__bundle i { font-style: normal; color: var(--gray); }
+.ql__bundlelink {
+  border: 1px solid var(--oxblood); border-radius: 999px; padding: 0.3rem 0.7rem;
+  font-size: 0.82rem; color: var(--oxblood); text-decoration: none;
+  transition: background 0.16s ease, color 0.16s ease;
+}
+.ql__bundlelink:hover { background: var(--oxblood); color: var(--cream); }
+.ql__bundlelink:hover i { color: var(--cream); }
+.ql__bundlelink i { font-style: normal; color: var(--gray); }
 .ql__cta {
   display: inline-block; margin-top: 1.4rem;
   font-family: "Space Mono", monospace; font-size: 0.78rem; letter-spacing: 0.06em;
