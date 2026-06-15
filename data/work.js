@@ -30,7 +30,7 @@ const WORK = [
   {
     id: "pinterest-gemini",
     type: "work",
-    tier: 2,
+    tier: 3,
     title: "Gemini × Pinterest",
     client: "Google × Pinterest",
     role: "Creative & Innovation Director",
@@ -162,7 +162,7 @@ const WORK = [
   {
     id: "swatch-olive",
     type: "swatch",
-    tier: 2,
+    tier: 3,
     swatchHex: "#847949",
     bio: "this year i bought a circular saw and built and installed custom cabinets, shelves and desks in my nyc apt...",
   },
@@ -527,7 +527,7 @@ const WORK = [
     categories: ["experiential"],
     tone: "almond",
     poster: "",
-    reel: "",
+    reel: "https://vimeo.com/381546277?fl=pl&fe=cm",
     story: "Experiential program produced end to end at Factory 360.",
     result: "National activation",
   },
@@ -572,10 +572,16 @@ const WORK = [
     dates: "2023",
     categories: ["production", "ctv", "social"],
     tone: "deepox",
-    poster: "assets/culturelle/19r2.jpg",
+    poster: "assets/culturelle/06222022_CULTURELLE_SHOT_1_9_R2.jpeg",
     reel: "assets/culturelle/tvc-widescreen.mp4",
     gallery: [
-      // stills TBD — will populate once uploaded
+      "assets/culturelle/06222022_CULTURELLE_SHOT_2_65_R2.jpeg",
+      "assets/culturelle/06222022_CULTURELLE_SHOT_3_267_R2.jpeg",
+      "assets/culturelle/06222022_CULTURELLE_SHOT_4_105_R2.jpeg",
+      "assets/culturelle/06222022_CULTURELLE_SHOT_4_158_R2.jpeg",
+      "assets/culturelle/06222022_CULTURELLE_SHOT_4_84_R2.jpeg",
+      "assets/culturelle/06222022_CULTURELLE_SHOT_5_11_R2.jpeg",
+      "assets/culturelle/06222022_CULTURELLE_SHOT_7_39_R3.jpeg",
     ],
     story:
       "A bold, color-driven campaign about women's health and resilience. Each scene owned its own Culturelle brand color — pink, green, yellow — building a visual language that's both intimate and commanding. TVC, social, and digital ad campaign built end to end.",
