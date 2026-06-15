@@ -365,8 +365,7 @@
          <p class="ql__rolemeta">Carlie Nicole · New York, NY</p>
          <p class="ql__story">A creative operator who builds the experience and the
            systems that run it. Nine years across experiential production, creative
-           direction, and innovation. Currently leading creative &amp; AI work for
-           Google, including the Pinterest&nbsp;×&nbsp;Gemini back-to-school partnership.</p>
+           direction, and innovation. Currently leading creative &amp; AI work for Google.</p>
          <p class="ql__result">CU Boulder · BA, Studio Art</p>
          <a class="ql__cta" href="assets/Carlie-Buske-Resume.pdf" download>Download résumé ↓</a>
        </div>`

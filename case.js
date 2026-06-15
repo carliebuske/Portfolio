@@ -25,12 +25,21 @@
       ? `<iframe src="https://player.vimeo.com/video/${id}?autoplay=1&loop=1&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" frameborder="0"></iframe>`
       : `<video src="${url}" autoplay loop playsinline controls></video>`;
   }
-  // Secondary clips: no autoplay (several on screen), player chrome on.
-  function clipEmbed(url) {
+  // Secondary clips: rendered via Vimeo's responsive player (case.js inits it
+  // after mount) so each clip fills at its OWN aspect ratio — no black bars,
+  // even when the cuts are mixed vertical / square / widescreen.
+  function clipNode(url) {
     const id = vimeoId(url);
     return id
-      ? `<iframe src="https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0&dnt=1" allow="fullscreen; picture-in-picture" frameborder="0" loading="lazy"></iframe>`
-      : `<video src="${url}" controls playsinline></video>`;
+      ? `<div class="case__clip" data-vimeo="${id}"></div>`
+      : `<div class="case__clip"><video src="${url}" controls playsinline></video></div>`;
+  }
+  function clipsBlock(list, heading) {
+    if (!list.length) return "";
+    return `<section class="case__section" style="max-width:none">
+              ${heading ? `<h2 class="case__h">${heading}</h2>` : ""}
+              <div class="case__clips">${list.map(clipNode).join("")}</div>
+            </section>`;
   }
 
   const reel = item.reel
@@ -54,12 +63,10 @@
         .map((src) => `<img src="${src}" alt="${item.title}" loading="lazy" />`)
         .join("")}</div>`
     : "";
-  const clips = item.clips && item.clips.length
-    ? `<section class="case__section" style="max-width:none">
-         <h2 class="case__h">The films</h2>
-         <div class="case__clips">${item.clips.map((c) => `<div class="case__clip">${clipEmbed(c)}</div>`).join("")}</div>
-       </section>`
-    : "";
+  // Split the films: first two above the stills, the rest below.
+  const allClips = item.clips || [];
+  const clipsTop = clipsBlock(allClips.slice(0, 2), "The films");
+  const clipsBottom = clipsBlock(allClips.slice(2), "");
   const meta = item.caseMeta || [item.client, item.role, item.dates].filter(Boolean).join(" · ");
 
   // Narrative sections (opportunity / idea / execution / role …)
@@ -106,6 +113,18 @@
      ${sections}
      ${results}
      ${awards}
-     ${clips}
-     ${gallery}`;
+     ${clipsTop}
+     ${gallery}
+     ${clipsBottom}`;
+
+  // Init Vimeo responsive players so each clip sizes to its native ratio.
+  if (window.Vimeo && window.Vimeo.Player) {
+    document.querySelectorAll(".case__clip[data-vimeo]").forEach((el) => {
+      new window.Vimeo.Player(el, {
+        id: Number(el.dataset.vimeo),
+        responsive: true,
+        title: false, byline: false, portrait: false, dnt: true,
+      });
+    });
+  }
 })();

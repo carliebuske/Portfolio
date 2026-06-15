@@ -30,7 +30,7 @@ const WORK = [
   {
     id: "pinterest-gemini",
     type: "work",
-    tier: 1,
+    tier: 2,
     title: "Pinterest × Gemini",
     client: "Google × Pinterest",
     role: "Creative & Innovation Director",
@@ -144,7 +144,7 @@ const WORK = [
   {
     id: "forma-curate",
     type: "work",
-    tier: 1,
+    tier: 3,
     title: "Forma Curate",
     client: "Independent",
     role: "Founder · Building",
@@ -163,7 +163,7 @@ const WORK = [
     type: "swatch",
     tier: 2,
     swatchHex: "#847949",
-    bio: "I build the experience — and the systems that run it.",
+    bio: "I knit — and I asked for a circular saw for Christmas to build my own cabinets.",
   },
   {
     id: "white-lotus-pixel",
@@ -240,7 +240,7 @@ const WORK = [
   {
     id: "gemini-paris-olympics",
     type: "work",
-    tier: 2,
+    tier: 1,
     title: "Gemini × Paris 2024 Olympics",
     client: "Google Gemini × NBCUniversal",
     caseMeta: "Google Gemini × NBCUniversal Olympics & Team USA · Paris 2024 · Media Futures Group (Google) / WPP",
@@ -250,6 +250,11 @@ const WORK = [
     tone: "blue",
     poster: "assets/olympics/leslie-couch.jpg",
     reel: "https://vimeo.com/1201304029",
+    clips: [
+      "https://vimeo.com/1201304022",
+      "https://vimeo.com/1201304028",
+      "https://vimeo.com/1201304025",
+    ],
     gallery: [
       "assets/olympics/paris-skyline.jpg",
       "assets/olympics/leslie-gemini.jpg",
@@ -341,7 +346,7 @@ const WORK = [
   {
     id: "goat-talk-search",
     type: "work",
-    tier: 2,
+    tier: 1,
     title: "GOAT Talk × Google Search",
     client: "Google Search × Complex",
     caseMeta: "Google Search (Education) × Complex · feat. Wyclef Jean & his daughter Claudinelle · Q4 2025",
@@ -350,7 +355,7 @@ const WORK = [
     categories: ["social", "publisher", "ctv"],
     tone: "deepox",
     poster: "assets/goattalk/table-cards.jpg",
-    reel: "",
+    reel: "https://vimeo.com/1201304026",
     gallery: [
       "assets/goattalk/table-wide.jpg",
       "assets/goattalk/wyclef.jpg",
@@ -404,7 +409,7 @@ const WORK = [
     type: "swatch",
     tier: 3,
     swatchHex: "#B7C5CC",
-    bio: "Nine years · experiential, creative direction, innovation.",
+    bio: "I have 20+ stuffed animals — including Jeffery, a 5-ft giraffe.",
   },
   {
     id: "uniqlo",
