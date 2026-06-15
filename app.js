@@ -223,7 +223,7 @@
     return cols || 6;
   }
   function layout() {
-    const tiles = [...board.children];
+    const tiles = [...board.children].filter((t) => !t.classList.contains("hide"));
     if (!tiles.length) return;
     const cols = gridCols();
     const occ = [];                                  // occ[row][col] = taken?
@@ -326,7 +326,7 @@
   let rT;
   window.addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(layout, 120); });
 
-  /* ---------- filters (dim/highlight in place) ---------- */
+  /* ---------- filters (hide non-matches, repack matches to the top) ---------- */
   function buildFilters() {
     FILTERS.forEach((f) => {
       const btn = document.createElement("button");
@@ -349,8 +349,10 @@
     [...board.children].forEach((el) => {
       const cats = el.dataset.cats || "";
       const match = activeFilter === "All" || cats.split(",").includes(key);
-      el.classList.toggle("dim", !match);
+      el.classList.toggle("hide", !match);
     });
+    // repack so the matching tiles flow up to the top of the board
+    layout();
   }
 
   /* ---------- modal ---------- */

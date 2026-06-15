@@ -226,6 +226,7 @@ em { font-style: normal; color: var(--oxblood); }
   z-index: 5;
 }
 .tile.dim { opacity: 0.22; filter: grayscale(0.4); }
+.tile.hide { display: none; }
 
 /* Poster frame (placeholder = palette gradient; real poster = <img>) */
 .tile__poster {
