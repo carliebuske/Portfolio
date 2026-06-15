@@ -564,17 +564,47 @@ const WORK = [
   {
     id: "culturelle",
     type: "work",
-    tier: 3,
-    title: "Culturelle",
+    tier: 2,
+    title: "Women Are Built Different",
     client: "Culturelle",
-    role: "Senior Art Director",
+    caseMeta: "Culturelle × Women Are Built Different · TVC, Social & Digital Campaign",
+    role: "Art Direction; Campaign Strategy; Production; On-Set Creative Direction",
     dates: "2023",
-    categories: ["production"],
+    categories: ["production", "ctv", "social"],
     tone: "deepox",
-    poster: "",
-    reel: "",
-    story: "Brand production work delivered end to end.",
-    result: "Full-funnel production",
+    poster: "assets/culturelle/19r2.jpg",
+    reel: "assets/culturelle/tvc-widescreen.mp4",
+    gallery: [
+      // stills TBD — will populate once uploaded
+    ],
+    story:
+      "A bold, color-driven campaign about women's health and resilience. Each scene owned its own Culturelle brand color — pink, green, yellow — building a visual language that's both intimate and commanding. TVC, social, and digital ad campaign built end to end.",
+    sections: [
+      {
+        h: "The idea",
+        p: "Women's wellness isn't one-note — it's complex, resilient, built on intention. The campaign gave each story its own bold visual identity: a color universe that made the brand feel expansive and human at once.",
+      },
+      {
+        h: "The approach",
+        p: "Art direction shaped the whole campaign. Each scene assigned a distinct Culturelle brand color — hot pink, vibrant green, rich yellow — so the color itself became the storytelling device. The result is a campaign that's visually unmissable and deeply on-brand.",
+        list: [
+          "TVC (broadcast + digital)",
+          "Social & influencer cut-downs",
+          "Digital ad campaign",
+          "On-set color-first creative direction",
+        ],
+      },
+      {
+        h: "My role",
+        p: "Art Direction + Campaign Strategy + Production + On-Set Creative Direction. I built the color language and visual strategy from the start, oversaw production through pre-pro and on-set, and ensured every frame honored the Culturelle brand through intentional, bold color.",
+      },
+    ],
+    awards: {
+      wins: [
+        "Comm Awards — Award of Distinction",
+      ],
+    },
+    result: "Award-winning TVC & social campaign · bold color-first creative",
   },
 ];
 
