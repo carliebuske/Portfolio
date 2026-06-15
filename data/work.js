@@ -253,7 +253,7 @@ const WORK = [
     dates: "2024",
     categories: ["ctv"],
     tone: "blue",
-    poster: "assets/olympics/leslie-couch.jpg",
+    poster: "assets/olympics/OLYMPICS-LESLIE5.JPEG",
     reel: "https://vimeo.com/1201304029",
     clips: ["https://vimeo.com/1201304028"],
     gallery: [
@@ -290,7 +290,7 @@ const WORK = [
     dates: "2024",
     categories: ["social"],
     tone: "blue",
-    poster: "assets/olympics/paris-skyline.jpg",
+    poster: "assets/olympics/olympicsus9.png",
     reel: "https://vimeo.com/1201304022",
     clips: ["https://vimeo.com/1201304025"],
     gallery: [
