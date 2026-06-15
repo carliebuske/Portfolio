@@ -175,6 +175,54 @@ const WORK = [
     result: "108.6M impressions · Digiday + 3× Clio",
   },
   {
+    id: "gemini-paris-olympics",
+    type: "work",
+    tier: 2,
+    title: "Gemini × Paris 2024 Olympics",
+    client: "Google Gemini × NBCUniversal",
+    caseMeta: "Google Gemini × NBCUniversal Olympics & Team USA · Paris 2024 · Media Futures Group (Google) / WPP",
+    role: "Creative & Innovation Lead",
+    dates: "2024",
+    categories: ["ctv", "social"],
+    tone: "blue",
+    poster: "",
+    reel: "",
+    bundle: [
+      { name: "Leslie Jones", note: "" },
+      { name: "Missy Franklin", note: "Team USA" },
+      { name: "Jagger Eaton", note: "Team USA" },
+      { name: "Dani Aravich", note: "Team USA" },
+    ],
+    story:
+      "Two pieces of Google's Gemini story for the Paris 2024 Olympics: a live CTV series with Leslie Jones that aired inside the Games' commercial breaks, and One Day in Paris, where five Team USA athletes used Gemini to navigate the city.",
+    sections: [
+      {
+        h: "Context",
+        p: "Google's Paris 2024 partnership — across NBC, Peacock, and Team USA — was built to show the breadth of its AI. My work focused on two pieces of that program.",
+      },
+      {
+        h: "Try It with Gemini · feat. Leslie Jones",
+        p: "The Olympics inspire everyone, not just athletes, to try something new — so we cast Leslie Jones, the Games' resident superfan commentator, and used Gemini to help her act on her Olympic-sized inspirations. A series of :30 CTV spots that ran live, inside the Olympics' commercial breaks, reacting to the Games in near-real time rather than sitting as static pre-made ads.",
+      },
+      {
+        h: "One Day in Paris · Team USA social series",
+        p: "Gemini as a Parisian coach, confidant, and tour guide. Five Team USA athletes used Google AI to navigate a real day in Paris — food, getting around, language, culture — each episode themed to that athlete's own interests. Format: 1–2 min hero videos + :30 cutdowns, using Gemini, Maps, Lens, and Circle to Search.",
+        list: [
+          "Vintage Shopping with Laurie — fashion",
+          "City of Love with Missy Franklin — casual learning + art",
+          "Off the Beaten Path with Dani Aravich — ideation + trip planning",
+          "Iconic Paris Views with Jagger Eaton — trip planning",
+          "Pastry Tour with Ilona & Olivia — food",
+        ],
+      },
+      {
+        h: "My role",
+        p: "Creative & innovation lead across both pieces — concept, talent, and production from idea through the broadcast and social cutdowns.",
+      },
+    ],
+    result: "Live in-broadcast CTV with Leslie Jones + a Team USA social series",
+  },
+  {
     id: "culture-creators",
     type: "work",
     tier: 2,
