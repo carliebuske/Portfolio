@@ -89,9 +89,26 @@
       el.dataset.cats = "about";
       el.innerHTML =
         `<div class="tile__poster" style="background:var(--${key || "olive"})">
-           <p class="tile__bio">${item.bio}</p>
+           <p class="tile__bio" contenteditable="true" spellcheck="false"></p>
          </div>
          <span class="tile__hex">${item.swatchHex}</span>`;
+      // Editable bio — saved per-tile in this browser's localStorage.
+      const bioEl = el.querySelector(".tile__bio");
+      const saved = localStorage.getItem("bio:" + item.id);
+      bioEl.textContent = saved != null ? saved : item.bio;
+      const saveBio = () =>
+        localStorage.setItem("bio:" + item.id, bioEl.textContent.trim());
+      // Don't open About while editing the text.
+      ["click", "mousedown", "pointerdown"].forEach((evt) =>
+        bioEl.addEventListener(evt, (e) => e.stopPropagation())
+      );
+      bioEl.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          bioEl.blur();
+        }
+      });
+      bioEl.addEventListener("blur", saveBio);
       el.addEventListener("click", () => openAbout());
       return el;
     }
