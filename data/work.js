@@ -290,7 +290,7 @@ const WORK = [
     dates: "2024",
     categories: ["social"],
     tone: "blue",
-    poster: "assets/olympics/olympicsus9.png",
+    poster: "assets/olympics/OLYMPICSUS9.png",
     reel: "https://vimeo.com/1201304022",
     clips: ["https://vimeo.com/1201304025"],
     gallery: [
