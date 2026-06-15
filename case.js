@@ -58,11 +58,14 @@
         })
         .join("")}</div>`
     : "";
-  const gallery = item.gallery && item.gallery.length
-    ? `<div class="case__gallery">${item.gallery
-        .map((src) => `<img src="${src}" alt="${item.title}" loading="lazy" />`)
-        .join("")}</div>`
-    : "";
+  function galleryBlock(imgs) {
+    if (!imgs || !imgs.length) return "";
+    return `<div class="case__gallery">${imgs
+      .map((src) => `<img src="${src}" alt="${item.title}" loading="lazy" />`)
+      .join("")}</div>`;
+  }
+  const galleryTop = galleryBlock(item.galleryTop);
+  const gallery = galleryBlock(item.gallery);
   // Split the films: first two above the stills, the rest below.
   const allClips = item.clips || [];
   const clipsTop = clipsBlock(allClips.slice(0, 2), "The films");
@@ -110,6 +113,7 @@
      <p class="case__meta">${meta}</p>
      <p class="case__story">${item.story}</p>
      ${bundle}
+     ${galleryTop}
      ${sections}
      ${results}
      ${awards}

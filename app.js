@@ -53,7 +53,8 @@
 
   /* ---------- poster background ---------- */
   function posterStyle(item) {
-    if (item.poster) return `background-image:url('${item.poster}')`;
+    if (item.poster)
+      return `background-image:url('${item.poster}');background-position:${item.posterPos || "center"}`;
     const tone = TONES[item.tone] || TONES.ink;
     return `background-image:linear-gradient(135deg, ${tone[0]}, ${tone[1]})`;
   }
