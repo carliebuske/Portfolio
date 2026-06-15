@@ -1,5 +1,5 @@
 /*
- * work.js — the single source of truth for the moodboard.
+ * work.js, the single source of truth for the moodboard.
  *
  * Add a new project = add one object to WORK below. No layout surgery.
  *
@@ -15,11 +15,11 @@
  *   story      2–3 line story (quick-look + case page)
  *   result     one headline result metric
  *   tone       palette key for the placeholder poster (see TONES in styles)
- *   poster     OPTIONAL image path — when set, overrides the tone placeholder
- *   reel       OPTIONAL embed URL (Vimeo/Mux) or local .mp4 — leave "" until assets land
- *   gallery    OPTIONAL array of image paths — rendered as a grid on the case page
- *   bundle     OPTIONAL [{name, note}] — talent/program names revealed on hover + modal
- *   inDev      OPTIONAL true — frames the case as in-development
+ *   poster     OPTIONAL image path, when set, overrides the tone placeholder
+ *   reel       OPTIONAL embed URL (Vimeo/Mux) or local .mp4, leave "" until assets land
+ *   gallery    OPTIONAL array of image paths, rendered as a grid on the case page
+ *   bundle     OPTIONAL [{name, note}], talent/program names revealed on hover + modal
+ *   inDev      OPTIONAL true, frames the case as in-development
  *
  * Swatch/bio tiles (type:"swatch") are the "rest notes": a solid color block
  *   swatchHex  printed small, like a real swatch
@@ -53,7 +53,7 @@ const WORK = [
     caseMeta: "Pixel 9 + Gemini · Made by Google 2024 · Google / MFG × Ogilvy",
     role: "Creative & Innovation Director",
     dates: "",
-    categories: ["experiential", "social", "production"],
+    categories: ["ctv", "social", "publisher"],
     tone: "ink",
     poster: "assets/afterparty/title-card.jpg",
     posterPos: "left center",
@@ -75,37 +75,37 @@ const WORK = [
       { name: "Joe Ando", note: "Circle to Search" },
     ],
     story:
-      "The Made by Google launch usually speaks to tech press. We threw it an After Party instead — a live-to-tape, Keke Palmer–hosted variety show that aired on YouTube right after the event, turning Pixel 9 + Gemini into culture with the internet's favorite talent. It outperformed Google's own Gemini benchmark.",
+      "The Made by Google launch usually speaks to tech press. We threw it an After Party instead, a live-to-tape, Keke Palmer–hosted variety show that aired on YouTube right after the event, turning Pixel 9 + Gemini into culture with the internet's favorite talent. It outperformed Google's own Gemini benchmark.",
     sections: [
       {
         h: "The opportunity",
-        p: "Made by Google announcements typically reach a narrow room — industry and tech press. The opportunity: make the Pixel 9 + Gemini launch land with a far broader, culture-first audience, through the names and faces Gen Z actually follows.",
+        p: "Made by Google announcements typically reach a narrow room, industry and tech press. The opportunity: make the Pixel 9 + Gemini launch land with a far broader, culture-first audience, through the names and faces Gen Z actually follows.",
       },
       {
         h: "The idea",
-        p: "Give Pixel and Gemini the coming-out party they deserve. A live-to-tape, 30-minute variety show — hosted by Keke Palmer — that aired on YouTube immediately after the Made by Google event, then broke apart into social.",
+        p: "Give Pixel and Gemini the coming-out party they deserve. A live-to-tape, 30-minute variety show, hosted by Keke Palmer, that aired on YouTube immediately after the Made by Google event, then broke apart into social.",
       },
       {
         h: "The execution",
         p: "We humanized the new Pixel 9 features by stitching beloved internet IP into segments, hosted by Keke Palmer, with designer Joe Ando using Circle to Search to design a custom look. Built by one combined Google/WPP team (MFG × Ogilvy), adapting and creating in real time. Partners: BuzzFeed, Complex, First We Feast, Paramount.",
         list: [
-          "Hot Ones (First We Feast) — Sean Evans",
-          "Complex Sneaker Shopping — Joe La Puma + Jimmy Butler",
+          "Hot Ones (First We Feast), Sean Evans",
+          "Complex Sneaker Shopping, Joe La Puma + Jimmy Butler",
           "BuzzFeed Puppy Interviews",
-          "RuPaul's Drag Race — Trixie Mattel & Monét X Change",
+          "RuPaul's Drag Race, Trixie Mattel & Monét X Change",
         ],
       },
       {
         h: "Why it matters",
-        p: "First-of-its-kind for Google — one combined WPP/Google team breaking silos to run creative + media together across paid, owned, and earned (the \"Modern Marketing Mix\"), turning a product keynote into a cultural moment.",
+        p: "First-of-its-kind for Google, one combined WPP/Google team breaking silos to run creative + media together across paid, owned, and earned (the \"Modern Marketing Mix\"), turning a product keynote into a cultural moment.",
       },
       {
         h: "My role",
-        p: "Creative & Innovation Director on the show — in it from ideation through delivery. I helped shape the concept and segments, briefed and partnered with the IP and media partners (BuzzFeed, Complex, First We Feast, Paramount) and the combined Google/WPP team, and worked hand-in-hand with production through pre-pro, the live-to-tape, and post.",
+        p: "Creative & Innovation Director on the show, in it from ideation through delivery. I helped shape the concept and segments, briefed and partnered with the IP and media partners (BuzzFeed, Complex, First We Feast, Paramount) and the combined Google/WPP team, and worked hand-in-hand with production through pre-pro, the live-to-tape, and post.",
       },
     ],
     results: [
-      "Outperformed Google's Gemini Top View benchmark — 3.57% CTR (vs 3.25%) · 3.63% ER (vs 3.57%)",
+      "Outperformed Google's Gemini Top View benchmark, 3.57% CTR (vs 3.25%) · 3.63% ER (vs 3.57%)",
       "TikTok drove 40% of all views; Top View ran above benchmark",
       "45 pieces of content · 8 talent · 6 platforms · 23 handles",
       "Created an ownable, repeatable \"After Party\" IP for Google",
@@ -139,7 +139,7 @@ const WORK = [
       "assets/jeans/tractor.jpg",
     ],
     story:
-      "Farm to Turntable — De La Ferme Aux Platines — at Jean's farm in New Hope, PA, with French friends from Les Enfants du Marché. A field dinner that turns into a DJ set: produced end to end, menu to music. Debuted May 2026, with a monthly series to follow.",
+      "Farm to Turntable, De La Ferme Aux Platines, at Jean's farm in New Hope, PA, with French friends from Les Enfants du Marché. A field dinner that turns into a DJ set: produced end to end, menu to music. Debuted May 2026, with a monthly series to follow.",
     result: "Inaugural farm dinner × DJ series",
   },
   {
@@ -149,14 +149,14 @@ const WORK = [
     title: "Forma Curate",
     client: "Independent",
     role: "Founder · Building",
-    dates: "2026 — In development",
+    dates: "2026, in development",
     categories: ["production"],
     tone: "rustic",
     poster: "",
     reel: "",
     inDev: true,
     story:
-      "An AI production tool for planning, budgeting, and running creative operations — the proof of the “systems that run it” half of the pitch.",
+      "An AI production tool for planning, budgeting, and running creative operations, the proof of the “systems that run it” half of the pitch.",
     result: "In active development",
   },
   {
@@ -204,15 +204,15 @@ const WORK = [
       { name: "Nicholas Duvernay", note: "show talent" },
     ],
     story:
-      "We didn't interrupt the White Lotus fandom — we joined it. An 8-part miniseries that put a Pixel in the hands of the show's most renowned superfan, turning HBO's most-anticipated premiere into a Pixel + Gemini story. 108.6M impressions. A Clio.",
+      "We didn't interrupt the White Lotus fandom, we joined it. An 8-part miniseries that put a Pixel in the hands of the show's most renowned superfan, turning HBO's most-anticipated premiere into a Pixel + Gemini story. 108.6M impressions. A Clio.",
     sections: [
       {
         h: "The idea",
-        p: "Rather than interrupt the White Lotus fandom, we joined it — handing the show's most renowned superfan, Evan Ross Katz, a miniseries of his own with a Pixel in hand, casting the phone and Gemini as the ultimate travel companion.",
+        p: "Rather than interrupt the White Lotus fandom, we joined it, handing the show's most renowned superfan, Evan Ross Katz, a miniseries of his own with a Pixel in hand, casting the phone and Gemini as the ultimate travel companion.",
       },
       {
         h: "What we made",
-        p: "An 8-part miniseries with Evan Ross Katz and show talent Nicholas Duvernay — live across Max, Instagram, and TikTok.",
+        p: "An 8-part miniseries with Evan Ross Katz and show talent Nicholas Duvernay, live across Max, Instagram, and TikTok.",
         list: [
           "Tech exclusivity with the franchise",
           "Season 1–3 title sponsorship + finale takeover on Max",
@@ -222,21 +222,21 @@ const WORK = [
       },
       {
         h: "My role",
-        p: "Creative & Innovation Director on the partnership — in it from ideation through delivery. I built the concept and talent strategy, briefed and partnered closely with HBO/Max and talent, and worked alongside the production team through pre-pro, on set, and post.",
+        p: "Creative & Innovation Director on the partnership, in it from ideation through delivery. I built the concept and talent strategy, briefed and partnered closely with HBO/Max and talent, and worked alongside the production team through pre-pro, on set, and post.",
       },
     ],
     results: [
       "108.6M total campaign impressions",
       "130% overdelivery across all placements on Max",
       "61.6K total social engagements",
-      "40 added-value brand mentions — 28 talent posts, 6 The White Lotus posts, 6 press mentions",
+      "40 added-value brand mentions, 28 talent posts, 6 The White Lotus posts, 6 press mentions",
     ],
     awards: {
       wins: [
-        "Digiday Award — Best Use of Influencer Marketing",
-        "MarCom Award — Best in Advertising Campaign (Platinum)",
-        "Muse Creative Award — Branded Content / Influencer Marketing",
-        "Clio Awards — 3× Bronze (Influencer & Talent Storytelling; Digital, Mobile & Social; Use of Influencer & Talent)",
+        "Digiday Award, Best Use of Influencer Marketing",
+        "MarCom Award, Best in Advertising Campaign (Platinum)",
+        "Muse Creative Award, Branded Content / Influencer Marketing",
+        "Clio Awards, 3× Bronze (Influencer & Talent Storytelling; Digital, Mobile & Social; Use of Influencer & Talent)",
       ],
       more: "Shortlists and finalist nods at Festival of Media North America, OMMA, Smarties, Epica, and Mediapost Planning & Buying Awards.",
     },
@@ -268,19 +268,19 @@ const WORK = [
     ],
     bundle: [{ name: "Leslie Jones", note: "host" }],
     story:
-      "The Olympics inspire everyone — not just athletes — to try something new. We cast Leslie Jones, the Games' most beloved superfan commentator, and used Gemini to help her act on her Olympic-sized inspirations. A series of :30 CTV spots that ran live inside the Games' commercial breaks, reacting in near-real time.",
+      "The Olympics inspire everyone, not just athletes, to try something new. We cast Leslie Jones, the Games' most beloved superfan commentator, and used Gemini to help her act on her Olympic-sized inspirations. A series of :30 CTV spots that ran live inside the Games' commercial breaks, reacting in near-real time.",
     sections: [
       {
         h: "The opportunity",
-        p: "Google wanted to show Gemini's breadth during the Paris 2024 Olympics — not as a product demo, but as something that genuinely showed up inside the moment. NBC and Peacock's live coverage gave us a live stage.",
+        p: "Google wanted to show Gemini's breadth during the Paris 2024 Olympics, not as a product demo, but as something that showed up inside the moment. NBC and Peacock's live coverage gave us a live stage.",
       },
       {
         h: "The idea",
-        p: "Cast the Games' own superfan commentator — Leslie Jones — and use Gemini to help her act on her Olympic-sized inspirations in real time. :30 CTV spots that aired live inside the commercial breaks, reacting to what was actually happening in the Games rather than sitting as static, pre-made ads.",
+        p: "Cast the Games' own superfan commentator, Leslie Jones, and use Gemini to help her act on her Olympic-sized inspirations in real time. :30 CTV spots that aired live inside the commercial breaks, reacting to what was actually happening in the Games rather than sitting as static, pre-made ads.",
       },
       {
         h: "My role",
-        p: "Creative & Innovation Director — I concepted the format, briefed and partnered with NBCUniversal, and worked with production through pre-pro, on set, and through post and the live broadcast.",
+        p: "Creative & Innovation Director, I concepted the format, briefed and partnered with NBCUniversal, and worked with production through pre-pro, on set, and through post and the live broadcast.",
       },
     ],
     result: "Live in-broadcast Gemini CTV with Leslie Jones · Paris 2024",
@@ -313,26 +313,26 @@ const WORK = [
       { name: "Ilona & Olivia", note: "Team USA" },
     ],
     story:
-      "Gemini as a Parisian coach, confidant, and tour guide. Five Team USA athletes used Google AI to navigate a real day in Paris — food, getting around, language, culture — each episode themed to that athlete's own life. 1–2 min hero episodes + :30 cutdowns, using Gemini, Maps, Lens, and Circle to Search.",
+      "Gemini as a Parisian coach, confidant, and tour guide. Five Team USA athletes used Google AI to navigate a real day in Paris, food, getting around, language, culture, each episode themed to that athlete's own life. 1–2 min hero episodes + :30 cutdowns, using Gemini, Maps, Lens, and Circle to Search.",
     sections: [
       {
         h: "The idea",
-        p: "Gemini as a Parisian coach, confidant, and tour guide — given to five Team USA athletes to navigate a real day in the city, each episode shaped by their own interests and personality.",
+        p: "Gemini as a Parisian coach, confidant, and tour guide, given to five Team USA athletes to navigate a real day in the city, each episode shaped by their own interests and personality.",
       },
       {
         h: "The episodes",
         p: "Format: 1–2 min hero videos + :30 cutdowns, using Gemini, Maps, Lens, and Circle to Search.",
         list: [
-          "Vintage Shopping with Laurie — fashion",
-          "City of Love with Missy Franklin — casual learning + art",
-          "Off the Beaten Path with Dani Aravich — ideation + trip planning",
-          "Iconic Paris Views with Jagger Eaton — trip planning",
-          "Pastry Tour with Ilona & Olivia — food",
+          "Vintage Shopping with Laurie, fashion",
+          "City of Love with Missy Franklin, casual learning + art",
+          "Off the Beaten Path with Dani Aravich, ideation + trip planning",
+          "Iconic Paris Views with Jagger Eaton, trip planning",
+          "Pastry Tour with Ilona & Olivia, food",
         ],
       },
       {
         h: "My role",
-        p: "Creative & Innovation Director — I concepted the series, briefed and partnered with Team USA, and worked hands-on with production through pre-pro, on set in Paris, and through post and the social rollout.",
+        p: "Creative & Innovation Director, I concepted the series, briefed and partnered with Team USA, and worked hands-on with production through pre-pro, on set in Paris, and through post and the social rollout.",
       },
     ],
     result: "Five-episode Team USA social series · Paris 2024",
@@ -345,7 +345,7 @@ const WORK = [
     title: "Culture & Creators",
     client: "Google",
     role: "Creative & Innovation Director",
-    dates: "2023 — Present",
+    dates: "2023–Present",
     categories: ["social", "ctv"],
     tone: "mauve",
     poster: "",
@@ -358,7 +358,7 @@ const WORK = [
       { name: "New Heights", note: "" },
     ],
     story:
-      "A bundle of creator-led integrations across the biggest names in culture — produced end to end, talent forward.",
+      "A bundle of creator-led integrations across the biggest names in culture, produced end to end, talent forward.",
     result: "Multi-program creator slate",
   },
   {
@@ -369,7 +369,7 @@ const WORK = [
     client: "Google Shopping × Kimmelot",
     caseMeta:
       "Google Shopping × Kimmelot · hosted by Jimmy Kimmel · Q4 2024 holiday",
-    role: "Lead Creative — originated & led the game-show format",
+    role: "Lead Creative, originated & led the game-show format",
     dates: "2024",
     categories: ["social", "ctv", "experiential"],
     tone: "almond",
@@ -399,19 +399,19 @@ const WORK = [
       { name: "Benny Blanco × Eric André", note: "" },
     ],
     story:
-      "We didn't run an ad for Google Shopping — we turned it into must-watch TV. Can You GIFT It? is an original game show hosted by Jimmy Kimmel where the game board is the Shopping Deals page, and finding the best deal is how you win. Five celebrity duos, one peak-season culture moment, 961M impressions — and 530K people taken straight to the Deals page.",
+      "We didn't run an ad for Google Shopping, we turned it into must-watch TV. Can You GIFT It? is an original game show hosted by Jimmy Kimmel where the game board is the Shopping Deals page, and finding the best deal is how you win. Five celebrity duos, one peak-season culture moment, 961M impressions, and 530K people taken straight to the Deals page.",
     sections: [
       {
         h: "The opportunity",
-        p: "Holiday shopping is the most stressful stretch of the year. Google Shopping wanted to own that tension — positioning itself as the stress-reducer that makes finding the right gift (and the best deal) easy — with a clear business goal: drive incremental usage during the Q4 peak and send traffic to the Shopping Deals page.",
+        p: "Holiday shopping is the most stressful stretch of the year. Google Shopping wanted to own that tension, positioning itself as the stress-reducer that makes finding the right gift (and the best deal) easy, with a clear business goal: drive incremental usage during the Q4 peak and send traffic to the Shopping Deals page.",
       },
       {
         h: "The idea",
-        p: "Game shows are having a cultural resurgence, so rather than interrupt that moment with advertising, we built our own: Can You GIFT It? — an original game show for Google Shopping with a game board built directly from the Shopping Deals page. The creative challenge was to fold real Google Shopping tools and deals messaging into actual game mechanics, so the product is the gameplay — without ever breaking the fun of a real game show.",
+        p: "Game shows are having a cultural resurgence, so rather than interrupt that moment with advertising, we built our own: Can You GIFT It?, an original game show for Google Shopping with a game board built directly from the Shopping Deals page. The creative challenge was to fold real Google Shopping tools and deals messaging into actual game mechanics, so the product is the gameplay, without ever breaking the fun of a real game show.",
       },
       {
         h: "The execution",
-        p: "An original game show hosted by Jimmy Kimmel (via Kimmelot), with a game board featuring the live Shopping Deals page — categories, price drops, and trend questions become the rounds (e.g. “What western-themed look had a 65% increase in Google Searches?” → Cowboy Hat). Five celebrity duos already inside a Q4 promo cycle — actors, musicians, comedians, and athletes — played alongside Kimmel, amplified across a social- and digital-first plan anchored by Google's YouTube channel.",
+        p: "An original game show hosted by Jimmy Kimmel (via Kimmelot), with a game board featuring the live Shopping Deals page, categories, price drops, and trend questions become the rounds (e.g. “What western-themed look had a 65% increase in Google Searches?” → Cowboy Hat). Five celebrity duos already inside a Q4 promo cycle, actors, musicians, comedians, and athletes, played alongside Kimmel, amplified across a social- and digital-first plan anchored by Google's YouTube channel.",
         list: [
           "Atsuko Okatsuka & Ronny Chieng",
           "Robin Thede & Roy Wood Jr.",
@@ -422,15 +422,15 @@ const WORK = [
       },
       {
         h: "Why it worked",
-        p: "The product surfaced through genuine gameplay — real deals, real price trends, real search data — so the Shopping integration landed as entertainment, not a demo. It met the brief on both sides: incremental usage during the peak period, and a lift in brand perception through positive viewer sentiment.",
+        p: "The product surfaced through genuine gameplay, real deals, real price trends, real search data, so the Shopping integration landed as entertainment, not a demo. It met the brief on both sides: incremental usage during the peak period, and a lift in brand perception through positive viewer sentiment.",
       },
       {
         h: "My role",
-        p: "Lead Creative — I originated and led the original game-show format, building the mechanic that turns the Shopping Deals page into the game board and partnering across talent, Kimmelot, and production from concept through delivery.",
+        p: "Lead Creative, I originated and led the original game-show format, building the mechanic that turns the Shopping Deals page into the game board and partnering across talent, Kimmelot, and production from concept through delivery.",
       },
     ],
     results: [
-      "530K unique visits to the Google Shopping Deals page — the KPI",
+      "530K unique visits to the Google Shopping Deals page, the KPI",
       "961M total impressions",
       "163M total views",
       "32M views on Google's YouTube channel",
@@ -463,19 +463,19 @@ const WORK = [
       { name: "Claudinelle Jean", note: "daughter" },
     ],
     story:
-      "A daughter schools her dad — Wyclef Jean — on the future of search. A special edition of Complex's top-performing show that turned the generation gap into the format, teaching students Google's new AI tools through a debate they actually wanted to watch.",
+      "A daughter schools her dad, Wyclef Jean, on the future of search. A special edition of Complex's top-performing show that turned the generation gap into the format, teaching students Google's new AI tools through a debate they actually wanted to watch.",
     sections: [
       {
         h: "The brief",
-        p: "Google Search wanted to reach students with its new AI features — AI Mode, AI Overviews, Lens \"Point & Ask,\" and Practice Quizzes — and show how search now handles deeper, layered, follow-up questions. The challenge: make product education feel like culture, not a tutorial.",
+        p: "Google Search wanted to reach students with its new AI features, AI Mode, AI Overviews, Lens \"Point & Ask,\" and Practice Quizzes, and show how search now handles deeper, layered, follow-up questions. The challenge: make product education feel like culture, not a tutorial.",
       },
       {
         h: "The insight",
-        p: "Reach students through nostalgia and the generation gap. Pair a legacy, broadly-beloved artist with his own recently-graduated daughter, and let the kid school the parent on how search works now. The generational dynamic becomes both the hook and the teaching mechanism — Wyclef was perfect for the multi-gen reach.",
+        p: "Reach students through nostalgia and the generation gap. Pair a legacy, broadly-beloved artist with his own recently-graduated daughter, and let the kid school the parent on how search works now. The generational dynamic becomes both the hook and the teaching mechanism, Wyclef was perfect for the multi-gen reach.",
       },
       {
         h: "The idea",
-        p: "A special edition of GOAT Talk — Complex's top-performing show by views — built so the show's signature card-draw debate stays fully intact. We just let key questions \"double-click\" into real, layered uses of Google's Search AI, so the learning happens inside the banter.",
+        p: "A special edition of GOAT Talk, Complex's top-performing show by views, built so the show's signature card-draw debate stays fully intact. We just let key questions \"double-click\" into real, layered uses of Google's Search AI, so the learning happens inside the banter.",
       },
       {
         h: "The execution",
@@ -485,16 +485,16 @@ const WORK = [
           "Three branded segments woven in: AI Mode · Lens Point & Ask · Practice Quizzes",
           "Animated AI Mode motion graphics",
           "Google Pixel phones in both guests' hands throughout",
-          "Real use cases on screen — plot summaries via Lens, layered follow-ups in AI Mode, customizable study quizzes",
+          "Real use cases on screen, plot summaries via Lens, layered follow-ups in AI Mode, customizable study quizzes",
         ],
       },
       {
         h: "Why it works",
-        p: "It doesn't fight the format — it uses GOAT Talk's existing DNA. The product surfaces through genuine questions (a movie's plot, an IMAX debate, \"my dorm room is bleak — help\"), so the education lands as conversation, not a demo.",
+        p: "It doesn't fight the format, it uses GOAT Talk's existing DNA. The product surfaces through genuine questions (a movie's plot, an IMAX debate, \"my dorm room is bleak, help\"), so the education lands as conversation, not a demo.",
       },
       {
         h: "My role",
-        p: "Creative & Innovation Director on the partnership — from the generation-gap insight through delivery. I shaped the concept and the format integration that kept GOAT Talk intact, briefed and partnered with Complex and talent, and stayed hands-on with production through pre-pro, the shoot, and the YouTube + social cutdowns.",
+        p: "Creative & Innovation Director on the partnership, from the generation-gap insight through delivery. I shaped the concept and the format integration that kept GOAT Talk intact, briefed and partnered with Complex and talent, and stayed hands-on with production through pre-pro, the shoot, and the YouTube + social cutdowns.",
       },
     ],
     result: "Product education that played as culture, not a tutorial",
@@ -504,16 +504,16 @@ const WORK = [
     type: "swatch",
     tier: 3,
     swatchHex: "#B7C5CC",
-    bio: "I have 20+ stuffed animals — including Jeffery, a 5-ft giraffe.",
+    bio: "I have 20+ stuffed animals, including Jeffery, a 5-ft giraffe.",
   },
   {
     id: "uniqlo",
     type: "work",
     tier: 2,
-    title: "UNIQLO — Wear Your World",
+    title: "UNIQLO, Wear Your World",
     client: "UNIQLO",
     caseMeta: "UNIQLO · UT graphic-tee launch · 4 markets (LA, SF, NYC, Boston) · 2018 · produced with Factory 360",
-    role: "Creative Lead — ideation → pre-production → production → onsite",
+    role: "Creative Lead, ideation → pre-production → production → onsite",
     dates: "2018",
     categories: ["experiential", "production"],
     tone: "ink",
@@ -531,28 +531,28 @@ const WORK = [
       "assets/uniqlo/uniqlo10.jpeg",
     ],
     story:
-      "UNIQLO's UT graphic tees, turned into a four-city block party. A two-phase street-and-city activation across LA, SF, NYC, and Boston that displayed the tees like artwork and made them the centerpiece of a block-party spectacle — with a free trip to Tokyo on the line. 3.5M+ impressions, 23,759 samples in hands, 6,138 attendees.",
+      "UNIQLO's UT graphic tees, turned into a four-city block party. A two-phase street-and-city activation across LA, SF, NYC, and Boston that displayed the tees like artwork and made them the centerpiece of a block-party spectacle, with a free trip to Tokyo on the line. 3.5M+ impressions, 23,759 samples in hands, 6,138 attendees.",
     sections: [
       {
         h: "The opportunity",
-        p: "Launch UNIQLO's new collection of UT graphic t-shirts across four markets. The client's criteria were specific: a footprint that fit the urban landscape of each city, that displayed the tees like artwork — while still creating a block-party feel with multiple touchpoints for consumers to engage.",
+        p: "Launch UNIQLO's new collection of UT graphic t-shirts across four markets. The client's criteria were specific: a footprint that fit the urban landscape of each city, that displayed the tees like artwork, while still creating a block-party feel with multiple touchpoints for consumers to engage.",
       },
       {
         h: "The idea",
-        p: "Wear Your World — treat the graphic tees as wearable art, and build a two-phase activation that earns the street first, then throws the party. Phase one seeds presence at ground level; phase two converts it into a spectacle.",
+        p: "Wear Your World, treat the graphic tees as wearable art, and build a two-phase activation that earns the street first, then throws the party. Phase one seeds presence at ground level; phase two converts it into a spectacle.",
       },
       {
         h: "The execution",
-        p: "A two-phase activation, owned concept through onsite — events, graphic design, installations, mobile tours, pop-ups, PR stunts, production, and sampling.",
+        p: "A two-phase activation, owned concept through onsite, events, graphic design, installations, mobile tours, pop-ups, PR stunts, production, and sampling.",
         list: [
-          "Phase 1 — Street teams distributed promotional clothespins and scratch-off cards on the weekends leading up to each city activation, building presence market by market",
-          "Phase 2 — #WearYourWorld Block Parties in LA, SF, and NYC transformed the collection into a visual spectacle displaying the UT shirts as art",
-          "Activities and photo ops invited passersby in; entrants could win a free trip to Tokyo — doubling as a powerful data-capture driver",
+          "Phase 1, Street teams distributed promotional clothespins and scratch-off cards on the weekends leading up to each city activation, building presence market by market",
+          "Phase 2, #WearYourWorld Block Parties in LA, SF, and NYC transformed the collection into a visual spectacle displaying the UT shirts as art",
+          "Activities and photo ops invited passersby in; entrants could win a free trip to Tokyo, doubling as a powerful data-capture driver",
         ],
       },
       {
         h: "My role",
-        p: "Creative Lead — ideation through onsite execution across four markets. I originated the 'Wear Your World' concept, led the art direction and environmental design, and ran production from pre-pro through the multi-city tour.",
+        p: "Creative Lead, ideation through onsite execution across four markets. I originated the 'Wear Your World' concept, led the art direction and environmental design, and ran production from pre-pro through the multi-city tour.",
       },
     ],
     results: [
@@ -569,10 +569,10 @@ const WORK = [
     id: "vrbo",
     type: "work",
     tier: 3,
-    title: "Vrbo Partner Summit — Electric Cowboy",
+    title: "Vrbo Partner Summit, Electric Cowboy",
     client: "Vrbo",
     caseMeta: "Vrbo · Annual Partner Summit · Scottsdale, AZ · 2019 · produced with Factory 360",
-    role: "Creative Lead — ideation → pre-production → production → onsite",
+    role: "Creative Lead, ideation → pre-production → production → onsite",
     dates: "2019",
     categories: ["experiential"],
     tone: "almond",
@@ -596,21 +596,21 @@ const WORK = [
       "assets/vrbo/vrbo16.jpeg",
     ],
     story:
-      "Vrbo's top property owners, dropped into an 'Electric Cowboy' world. For the second year of Vrbo's annual Partner Summit, I led the creative for a sold-out conference that fused Scottsdale's western landscape with Vrbo's future-facing tech story — three edge-lit acrylic stages, a western town built entirely from light, and a fireworks-capped opening night. 600 attendees. Sold out.",
+      "Vrbo's top property owners, dropped into an 'Electric Cowboy' world. For the second year of Vrbo's annual Partner Summit, I led the creative for a sold-out conference that fused Scottsdale's western landscape with Vrbo's future-facing tech story, three edge-lit acrylic stages, a western town built entirely from light, and a fireworks-capped opening night. 600 attendees. Sold out.",
     sections: [
       {
         h: "The opportunity",
-        p: "The Partner Summit is Vrbo's annual conference — the moment its top property owners come together to learn and collaborate. Year two moved to Scottsdale, AZ. The challenge: take a B2B educational conference and make it feel like a branded experience worthy of Vrbo's innovation story, rooted in its desert setting rather than fighting it.",
+        p: "The Partner Summit is Vrbo's annual conference, the moment its top property owners come together to learn and collaborate. Year two moved to Scottsdale, AZ. The challenge: take a B2B educational conference and make it feel like a branded experience worthy of Vrbo's innovation story, rooted in its desert setting rather than fighting it.",
       },
       {
         h: "The idea",
-        p: "Electric Cowboy — fuse the western surroundings of Scottsdale with the future-focused subject matter of the conference. An art direction that brings tech and western culture together, using materials visually associated with technology and the future so the room itself tells the innovation story.",
+        p: "Electric Cowboy, fuse the western surroundings of Scottsdale with the future-focused subject matter of the conference. An art direction that brings tech and western culture together, using materials visually associated with technology and the future so the room itself tells the innovation story.",
       },
       {
         h: "The execution",
-        p: "Three stages, three landscapes: each stage design represented a different western landscape — but built from edge-lit acrylic, so the western world was rendered in light and tech, physically embodying Vrbo's dedication to innovation. The opening reception was a western town built from light, with photobooth, electronic music, and a fireworks display.",
+        p: "Three stages, three landscapes: each stage design represented a different western landscape, but built from edge-lit acrylic, so the western world was rendered in light and tech, physically embodying Vrbo's dedication to innovation. The opening reception was a western town built from light, with photobooth, electronic music, and a fireworks display.",
         list: [
-          "Three edge-lit acrylic stages — each a different western landscape",
+          "Three edge-lit acrylic stages, each a different western landscape",
           "Opening reception: western town built from light + photobooth + fireworks",
           "Environmental & graphic design",
           "Production & tour management end to end",
@@ -618,7 +618,7 @@ const WORK = [
       },
       {
         h: "My role",
-        p: "Creative Lead — ideation through onsite execution. I originated the 'Electric Cowboy' concept, led the art direction and environmental design, managed production partnerships, and directed the experience onsite.",
+        p: "Creative Lead, ideation through onsite execution. I originated the 'Electric Cowboy' concept, led the art direction and environmental design, managed production partnerships, and directed the experience onsite.",
       },
     ],
     results: [
@@ -676,20 +676,20 @@ const WORK = [
       "assets/azo/azo19.jpeg",
     ],
     story:
-      "A full-funnel campaign blending product education with brand storytelling — shot end to end with focus on real moments, texture, and the confidence AZO brings to everyday wellness.",
+      "A full-funnel campaign blending product education with brand storytelling, shot end to end with focus on real moments, texture, and the confidence AZO brings to everyday wellness.",
     sections: [
       {
         h: "The approach",
-        p: "Creative direction shaped every frame — from product placement to color palette to the emotional beats of each scene. Production handled end to end, balancing brand guidelines with authentic, relatable storytelling.",
+        p: "Creative direction shaped every frame, from product placement to color palette to the emotional beats of each scene. Production handled end to end, balancing brand guidelines with authentic, relatable storytelling.",
       },
       {
         h: "My role",
-        p: "Creative Direction + Production. I built the visual language, oversaw the shoot, and shaped post-production to ensure every asset — from TVC to social — felt cohesive and on-brand.",
+        p: "Creative Direction + Production. I built the visual language, oversaw the shoot, and shaped post-production to ensure every asset, from TVC to social, felt cohesive and on-brand.",
       },
     ],
     awards: {
       wins: [
-        "Comm Awards — Advertising Campaign Category",
+        "Comm Awards, Advertising Campaign Category",
       ],
     },
     result: "Award-winning TVC & social campaign · full-funnel production",
@@ -717,15 +717,15 @@ const WORK = [
       "assets/culturelle/06222022_CULTURELLE_SHOT_7_39_R3.jpeg",
     ],
     story:
-      "A bold, color-driven campaign about women's health and resilience. Each scene owned its own Culturelle brand color — pink, green, yellow — building a visual language that's both intimate and commanding. TVC, social, and digital ad campaign built end to end.",
+      "A bold, color-driven campaign about women's health and resilience. Each scene owned its own Culturelle brand color, pink, green, yellow, building a visual language that's both intimate and commanding. TVC, social, and digital ad campaign built end to end.",
     sections: [
       {
         h: "The idea",
-        p: "Women's wellness isn't one-note — it's complex, resilient, built on intention. The campaign gave each story its own bold visual identity: a color universe that made the brand feel expansive and human at once.",
+        p: "Women's wellness isn't one-note, it's complex, resilient, built on intention. The campaign gave each story its own bold visual identity: a color universe that made the brand feel expansive and human at once.",
       },
       {
         h: "The approach",
-        p: "Art direction shaped the whole campaign. Each scene assigned a distinct Culturelle brand color — hot pink, vibrant green, rich yellow — so the color itself became the storytelling device. The result is a campaign that's visually unmissable and deeply on-brand.",
+        p: "Art direction shaped the whole campaign. Each scene assigned a distinct Culturelle brand color, hot pink, vibrant green, rich yellow, so the color itself became the storytelling device. The result is a campaign that's visually unmissable and deeply on-brand.",
         list: [
           "TVC (broadcast + digital)",
           "Social & influencer cut-downs",
@@ -740,7 +740,7 @@ const WORK = [
     ],
     awards: {
       wins: [
-        "Comm Awards — Award of Distinction",
+        "Comm Awards, Award of Distinction",
       ],
     },
     result: "Award-winning TVC & social campaign · bold color-first creative",

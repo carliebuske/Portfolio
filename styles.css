@@ -475,7 +475,7 @@ em { font-style: normal; color: var(--oxblood); }
 .watermark {
   font-family: "Archivo", sans-serif;
   font-weight: 900;
-  font-size: clamp(4rem, 22vw, 18rem);
+  font-size: clamp(3rem, 16vw, 14rem);
   line-height: 0.8;
   letter-spacing: -0.04em;
   color: var(--gray);
@@ -483,7 +483,7 @@ em { font-style: normal; color: var(--oxblood); }
   padding: 0 clamp(1.25rem, 4vw, 3rem) 1.5rem;
   max-width: var(--max);
   margin: 0 auto;
-  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* ---------- MODAL ---------- */
