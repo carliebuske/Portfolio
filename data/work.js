@@ -292,8 +292,15 @@ const WORK = [
     dates: "Q4 2025",
     categories: ["social", "publisher", "ctv"],
     tone: "deepox",
-    poster: "",
+    poster: "assets/goattalk/table-cards.jpg",
     reel: "",
+    gallery: [
+      "assets/goattalk/table-wide.jpg",
+      "assets/goattalk/wyclef.jpg",
+      "assets/goattalk/daughter-pixel.jpg",
+      "assets/goattalk/ai-mode.jpg",
+      "assets/goattalk/cards-pixel.jpg",
+    ],
     bundle: [
       { name: "Wyclef Jean", note: "" },
       { name: "Claudinelle Jean", note: "daughter" },
