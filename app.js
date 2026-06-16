@@ -405,9 +405,11 @@
       `<div class="ql__inner" style="padding-top:2.2rem">
          <h2 class="ql__title">A Bit About Me</h2>
          <p class="ql__rolemeta">Carlie Nicole · New York, NY</p>
-         <p class="ql__story">I grew up around people who made things. Furniture, homes,
-           dinners, gardens, businesses—whatever needed building. Now I do the same thing,
-           just with campaigns, experiences, spaces, and systems.</p>
+         <p class="ql__story">I grew up around people who made things: homes, furniture,
+           dinners, gardens, businesses, whatever needed building. Now I do the same thing
+           with campaigns, experiences, spaces, and systems. Nine years across creative
+           direction, experiential production, and innovation. Currently leading creative
+           and AI work for Google.</p>
          <p class="ql__result">CU Boulder · BA, Studio Art</p>
          <a class="ql__cta" href="assets/Carlie-Buske-Resume.pdf" download>Download résumé ↓</a>
        </div>`
