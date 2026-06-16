@@ -297,7 +297,7 @@ const WORK = [
     id: "gemini-leslie-olympics",
     type: "work",
     tier: 1,
-    title: "Try it with Gemini × Olympics",
+    title: "Try it with Gemini × Leslie Jones",
     client: "Google Gemini × NBCUniversal",
     caseMeta: "Google Gemini × NBCUniversal · feat. Leslie Jones · Paris 2024 Olympics · Media Futures Group (Google) / WPP",
     role: "Creative & Innovation Director",
@@ -318,23 +318,31 @@ const WORK = [
       "assets/olympics/OLYMPICS-LESLIE5.jpeg",
     ],
     bundle: [{ name: "Leslie Jones", note: "host" }],
+    tagline: "The internet's Olympic commentator gets a co-pilot.",
     story:
-      "The Olympics inspire everyone, not just athletes, to try something new. We cast Leslie Jones, the Games' most beloved superfan commentator, and used Gemini to help her act on her Olympic-sized inspirations. A series of :30 CTV spots that ran live inside the Games' commercial breaks, reacting in near-real time.",
+      "Nobody loves the Olympics quite like Leslie Jones.<br /><br />For Paris 2024, we paired the Games' most beloved superfan commentator with Gemini, helping her turn Olympic-sized inspiration into real-world action.<br /><br />The result was a series of live-reactive spots that aired during NBC's Olympic coverage, proving that AI can be useful, funny, and occasionally keep up with Leslie Jones.",
+    caseIntro:
+      "The Olympics make everyone want to try something.<br /><br />Run farther. Learn something new. Finally sign up for the class you've been talking about for three years.<br /><br />For Paris 2024, we partnered with Leslie Jones and used Gemini to help turn that inspiration into action, creating a series that lived directly inside NBC's Olympic coverage.",
     sections: [
       {
         h: "The opportunity",
-        p: "Google wanted to show Gemini's breadth during the Paris 2024 Olympics, not as a product demo, but as something that showed up inside the moment. NBC and Peacock's live coverage gave us a live stage.",
+        p: "The Olympics are one of the few moments that make millions of people feel the same thing at the same time.<br /><br />Google wanted to show Gemini inside that feeling—not as a technology demonstration, but as something useful when inspiration strikes.<br /><br />NBC's live Olympic coverage gave us the perfect stage.",
       },
       {
         h: "The idea",
-        p: "Cast the Games' own superfan commentator, Leslie Jones, and use Gemini to help her act on her Olympic-sized inspirations in real time. :30 CTV spots that aired live inside the commercial breaks, reacting to what was actually happening in the Games rather than sitting as static, pre-made ads.",
+        p: "Cast the Games' biggest fan.<br /><br />Leslie Jones has spent years reacting to the Olympics the same way the rest of us do: loudly, enthusiastically, and in real time.<br /><br />So we paired her with Gemini and built a series of spots that transformed Olympic inspiration into practical action, airing live within the Games rather than sitting beside them.",
+      },
+      {
+        h: "Why it worked",
+        p: "The Olympics are emotional.<br /><br />Most advertising during them isn't.<br /><br />By letting Leslie be Leslie, Gemini became part of the conversation instead of interrupting it.<br /><br />The technology played support. The personality carried the story.",
       },
       {
         h: "My role",
-        p: "Creative & Innovation Director, I concepted the format, briefed and partnered with NBCUniversal, and worked with production through pre-pro, on set, and through post and the live broadcast.",
+        p: "Creative & Innovation Director from concept through launch.<br /><br />I developed the format and creative approach, partnered closely with NBCUniversal and Google teams, and worked across production, post, and live broadcast execution.",
       },
     ],
-    result: "Live in-broadcast Gemini CTV with Leslie Jones · Paris 2024",
+    result: "Built for commercial breaks. Inspired by gold medals.",
+    caseResult: "Powered by Gemini. Driven by Leslie Jones.",
   },
   {
     id: "google-one-day-paris",
