@@ -157,8 +157,8 @@ const WORK = [
     inDev: true,
     liveApp: "forma/index.html",
     story:
-      "Forma Curate is a studio operations tool I'm building: a project manager, planner, and calendar you can journal on. Projects, events, contacts, and receipts in one place, the proof of the “systems that run it” half of the pitch. Open the case page to try the live app.",
-    result: "In active development · live interactive demo",
+      "Forma Curate is the desktop app I'm building (with AI) to run a whole creative studio from one canvas. Part personal assistant and automated calendar synced to G-Suite, part modular bulletin board you can rearrange at will. It holds the entire operation: a task list and project manager, a production tracker with file folders and a finder, a rolodex for guests, vendors, talent, staff, and clients, an invoice creator and receipt holder, plus a journal, sketchbook, and mood board wired to my Pinterest. Basically my brain, organized in one big canvas. Open the case page to play with the live demo.",
+    result: "Work in progress · live interactive demo",
   },
   {
     id: "swatch-olive",
