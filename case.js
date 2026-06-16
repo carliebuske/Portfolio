@@ -130,6 +130,7 @@
      ${reelBlock}
      ${indev}
      <h1 class="case__title">${item.title}</h1>
+     ${item.tagline ? `<p class="case__tagline">${item.tagline}</p>` : ""}
      <p class="case__meta">${meta}</p>
      <p class="case__story">${item.story}</p>
      ${bundle}

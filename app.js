@@ -390,6 +390,7 @@
        <div class="ql__inner">
          ${indev}
          <h2 class="ql__title">${item.title}</h2>
+         ${item.tagline ? `<p class="ql__tagline">${item.tagline}</p>` : ""}
          <p class="ql__rolemeta">${[item.client, item.role, item.dates].filter(Boolean).join(" · ")}</p>
          <p class="ql__story">${item.story}</p>
          ${bundle}

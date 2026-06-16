@@ -156,8 +156,9 @@ const WORK = [
     reel: "",
     inDev: true,
     liveApp: "forma/index.html",
+    tagline: "A creative operating system built for people who keep too many tabs open.",
     story:
-      "Forma Curate is a creative studio condensed into a single canvas. Projects, production, contacts, calendars, invoices, notes, and inspiration—all connected and endlessly rearrangeable. Essentially, my brain, but easier to navigate.",
+      "Forma Curate started as a question: what if a creative studio lived on a single canvas?<br /><br />Projects, production, calendars, contacts, invoices, notes, sketches, references, and the thousand loose ends that normally live across twenty tabs—all connected in one place.<br /><br />Essentially my brain, but easier to navigate.",
     result: "Work in progress · live interactive demo",
   },
   {
