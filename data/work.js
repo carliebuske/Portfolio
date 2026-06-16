@@ -579,6 +579,13 @@ const WORK = [
     bio: "I have 20+ stuffed animals, including Jeffery, a 5-ft giraffe.",
   },
   {
+    id: "swatch-clay",
+    type: "swatch",
+    tier: 3,
+    swatchHex: "#C4907A",
+    bio: "People remember the weird detail.\n\nThe tomato with their name on it.\nThe playlist.\nThe group chat.\nThe thing someone almost didn't notice.\n\nThat's usually the point.",
+  },
+  {
     id: "uniqlo",
     type: "work",
     tier: 2,
