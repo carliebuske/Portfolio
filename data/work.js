@@ -534,42 +534,45 @@ const WORK = [
       { name: "Wyclef Jean", note: "" },
       { name: "Claudinelle Jean", note: "daughter" },
     ],
+    tagline: "Wyclef Jean gets fact-checked at home.",
     story:
-      "A daughter schools her dad, Wyclef Jean, on the future of search. A special edition of Complex's top-performing show that turned the generation gap into the format, teaching students Google's new AI tools through a debate they actually wanted to watch.",
+      "The fastest way to teach students about AI wasn't a tutorial.<br /><br />It was letting a daughter explain it to her dad.<br /><br />Built with Complex's GOAT Talk, Wyclef Jean and his daughter Claudinelle debated everything from movies to school to technology, turning Google's latest Search tools into part of a conversation people would actually choose to watch.",
+    caseIntro:
+      "The generation gap finally became useful.<br /><br />Google Search wanted students to understand its newest AI tools, but nobody wakes up hoping to watch product education.<br /><br />So instead, we built a format around something much more entertaining: a daughter teaching her dad how search works now.",
     sections: [
       {
-        h: "The brief",
-        p: "Google Search wanted to reach students with its new AI features, AI Mode, AI Overviews, Lens \"Point & Ask,\" and Practice Quizzes, and show how search now handles deeper, layered, follow-up questions. The challenge: make product education feel like culture, not a tutorial.",
+        h: "The opportunity",
+        p: "Students were adopting AI faster than anyone.<br /><br />Parents, teachers, and the rest of the world were still catching up.<br /><br />The opportunity wasn't to explain the technology.<br /><br />It was to dramatize the gap between the people already using it and the people still figuring it out.",
       },
       {
         h: "The insight",
-        p: "Reach students through nostalgia and the generation gap. Pair a legacy, broadly-beloved artist with his own recently-graduated daughter, and let the kid school the parent on how search works now. The generational dynamic becomes both the hook and the teaching mechanism, Wyclef was perfect for the multi-gen reach.",
+        p: "Every generation thinks they're the expert until technology changes.<br /><br />Pair a globally recognized artist with his recently graduated daughter and let the student become the teacher.<br /><br />The role reversal becomes both the joke and the lesson.",
       },
       {
         h: "The idea",
-        p: "A special edition of GOAT Talk, Complex's top-performing show by views, built so the show's signature card-draw debate stays fully intact. We just let key questions \"double-click\" into real, layered uses of Google's Search AI, so the learning happens inside the banter.",
+        p: "Use GOAT Talk's existing DNA.<br /><br />Instead of reinventing the format, we let Wyclef and Claudinelle debate real questions the same way they already would.<br /><br />Google Search and AI tools entered naturally through the conversation, allowing the learning to happen inside the entertainment.",
       },
       {
         h: "The execution",
-        p: "Built to live as a full YouTube episode and cut down to run independently on social.",
+        p: "A special back-to-school edition of Complex's top-performing series.<br /><br />Built as a full YouTube episode and social cutdowns, the partnership integrated AI Mode, Lens, Point & Ask, and Practice Quizzes into the format without disrupting what people already liked about the show.",
         list: [
-          "\"Powered by Google\" cold open",
-          "Three branded segments woven in: AI Mode · Lens Point & Ask · Practice Quizzes",
-          "Animated AI Mode motion graphics",
-          "Google Pixel phones in both guests' hands throughout",
-          "Real use cases on screen, plot summaries via Lens, layered follow-ups in AI Mode, customizable study quizzes",
+          "Wyclef being confidently wrong",
+          "Claudinelle being prepared",
+          "Real student use cases",
+          "Product education hidden inside family banter",
         ],
       },
       {
-        h: "Why it works",
-        p: "It doesn't fight the format, it uses GOAT Talk's existing DNA. The product surfaces through genuine questions (a movie's plot, an IMAX debate, \"my dorm room is bleak, help\"), so the education lands as conversation, not a demo.",
+        h: "Why it worked",
+        p: "Nobody wants to be taught.<br /><br />Everyone likes taking sides.<br /><br />By turning product education into a generational debate, the audience learned alongside Wyclef instead of being lectured by a brand.<br /><br />The lesson arrived disguised as entertainment.",
       },
       {
         h: "My role",
-        p: "Creative & Innovation Director on the partnership, from the generation-gap insight through delivery. I shaped the concept and the format integration that kept GOAT Talk intact, briefed and partnered with Complex and talent, and stayed hands-on with production through pre-pro, the shoot, and the YouTube + social cutdowns.",
+        p: "Creative & Innovation Director from concept through launch.<br /><br />I helped develop the core insight, shaped the partnership and format integration, worked closely with Complex and talent teams, and guided the project through production, post, and social rollout.",
       },
     ],
-    result: "Product education that played as culture, not a tutorial",
+    result: "Education disguised as an argument.",
+    caseResult: "Google Search, explained by someone's daughter.",
   },
   {
     id: "swatch-blue",
