@@ -766,15 +766,25 @@ const WORK = [
       "assets/azo/azo19.jpeg",
     ],
     story:
-      "A full-funnel campaign blending product education with brand storytelling, shot end to end with focus on real moments, texture, and the confidence AZO brings to everyday wellness.",
+      "Women don't talk about intimate health because it's glamorous.<br /><br />They talk about it because it's real.<br /><br />Across three campaigns for AZO, we helped move the conversation away from embarrassment and toward everyday care, building social, digital, and video content rooted in education, empathy, and real-life experiences.",
+    caseIntro:
+      "For over a decade, AZO has helped women navigate some of the least talked-about parts of everyday health.<br /><br />Across multiple campaigns, we focused on making those conversations feel more human, more approachable, and less clinical—using storytelling, education, and cultural insight instead of fear or stigma.",
     sections: [
       {
         h: "The approach",
-        p: "Creative direction shaped every frame, from product placement to color palette to the emotional beats of each scene. Production handled end to end, balancing brand guidelines with authentic, relatable storytelling.",
+        p: "The work spanned product launches, social campaigns, educational content, and full-scale productions.<br /><br />Rather than dramatize symptoms, we focused on real behaviors, real questions, and real moments—meeting women where they already were and giving them information that felt useful, not intimidating.",
+      },
+      {
+        h: "The campaigns",
+        p: "<strong>AZO Girl</strong><br />A digital-first character built to help women navigate UTI pain with humor, clarity, and confidence.<br /><br /><strong>We've Been There</strong><br />A campaign rooted in a simple truth: most women have experienced intimate health issues, even if nobody talks about them. The work centered everyday routines, reassurance, and the launch of AZO's Vaginal Probiotic Mini-Chews.<br /><br /><strong>Social + Education</strong><br />A library of myth-busting content, educational videos, and social storytelling designed for millennial and Gen Z audiences, making intimate health information easier to understand and easier to share.",
       },
       {
         h: "My role",
-        p: "Creative Direction + Production. I built the visual language, oversaw the shoot, and shaped post-production to ensure every asset, from TVC to social, felt cohesive and on-brand.",
+        p: "Lead Senior Art Director across multiple campaigns.<br /><br />I helped shape the visual language, creative direction, production, and post-production across TV, digital, and social work—ensuring every touchpoint felt approachable, modern, and human.",
+      },
+      {
+        h: "Why it worked",
+        p: "The strongest health education doesn't feel like a lecture.<br /><br />By grounding the work in real experiences and recognizable moments, the campaigns created space for conversations that often get avoided altogether.",
       },
     ],
     awards: {
@@ -782,7 +792,8 @@ const WORK = [
         "Comm Awards, Advertising Campaign Category",
       ],
     },
-    result: "Award-winning TVC & social campaign · full-funnel production",
+    result: "Education over embarrassment.",
+    caseResult: "Women's health, without the whisper.",
   },
   {
     id: "culturelle",
