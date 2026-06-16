@@ -116,7 +116,7 @@ const WORK = [
     tier: 1,
     title: "Farm to Turntable",
     client: "Jean's × Les Enfants du Marché",
-    role: "Producer · Hospitality",
+    role: "Event Producer · Creative Lead",
     dates: "",
     categories: ["experiential", "social", "production"],
     tone: "almond",
@@ -136,9 +136,47 @@ const WORK = [
       "assets/jeans/place-card.jpg",
       "assets/jeans/tractor.jpg",
     ],
+    tagline: "Dinner first. Dancing later.",
     story:
-      "Farm to Turntable, De La Ferme Aux Platines, at Jean's farm in New Hope, PA, with French friends from Les Enfants du Marché. A field dinner that turns into a DJ set: produced end to end, menu to music. Debuted May 2026, with a monthly series to follow.",
-    result: "Inaugural farm dinner × DJ series",
+      "A field dinner that slowly became a dance floor.<br /><br />Created with Les Enfants du Marché and chef Louis Mizb, Farm to Turntable brought a long-table dinner to Jean's farm in New Hope, Pennsylvania, before easing into a sunset DJ set under the open sky.<br /><br />Guests spent the afternoon foraging, pickling, building bouquets, and finding their seats by way of heirloom tomatoes hand-lettered with their names.<br /><br />Everything on the table came from the farm—including the table itself.",
+    caseIntro:
+      "Farm to Turntable began with a simple question: what happens when a farm dinner refuses to end after dessert?<br /><br />Created alongside Les Enfants du Marché at Jean's farm in New Hope, Pennsylvania, the evening combined seasonal cooking, hands-on experiences, and a DJ set that carried guests from golden hour into the night.<br /><br />Part dinner party. Part field trip. Part dance floor.",
+    sections: [
+      {
+        h: "The opportunity",
+        p: "People are craving experiences that feel real again.<br /><br />Not bigger. Not louder. Just thoughtful enough to remember.<br /><br />The goal was to create a gathering that felt deeply connected to place, season, and the people around the table.",
+      },
+      {
+        h: "The idea",
+        p: "Let the farm design the event.<br /><br />Guests spent the afternoon wandering the property, foraging, pickling, arranging bouquets, and meeting one another before dinner.<br /><br />When it was time to sit, each place setting was marked with an heirloom tomato hand-lettered with the guest's name.<br /><br />Dinner unfolded in the field before naturally giving way to music, drinks, and dancing.",
+      },
+      {
+        h: "What we made",
+        p: "An inaugural dinner and DJ series with Les Enfants du Marché and chef Louis Mizb.<br /><br />Highlights included:",
+        list: [
+          "Foraging throughout the farm",
+          "Seasonal pickling workshops",
+          "Build-your-own bouquet stations",
+          "Personalized heirloom tomato place cards",
+          "Farm-grown tablescapes and florals",
+          "Open-fire cooking",
+          "Sunset dinner transitioning into a DJ set",
+        ],
+      },
+      {
+        h: "The details",
+        p: "The tablescape was built almost entirely from materials sourced directly from the farm.<br /><br />Vegetables, flowers, herbs, and natural elements were gathered and arranged to make the landscape feel like an extension of the table itself.<br /><br />Every heirloom tomato was hand-lettered individually. Because sometimes the smallest details are the ones people photograph first.",
+      },
+      {
+        h: "Why it matters",
+        p: "The best events don't feel programmed. They feel discovered.<br /><br />Farm to Turntable wasn't about spectacle. It was about giving people a reason to slow down, get a little dirt on their shoes, and stay longer than they planned.",
+      },
+      {
+        h: "My role",
+        p: "Event Producer and Creative Lead.<br /><br />I developed the guest experience, activities, tablescape, creative direction, and event flow from arrival through the final song.<br /><br />From hand-lettering every tomato to sourcing materials from the farm itself, the goal was to make every detail feel personal, considered, and connected to the setting.",
+      },
+    ],
+    result: "Proof that dinner parties still work.",
   },
   {
     id: "forma-curate",
