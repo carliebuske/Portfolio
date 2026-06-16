@@ -102,6 +102,7 @@
                 <h2 class="case__h">${s.h}</h2>
                 ${s.p ? `<p class="case__body">${s.p}</p>` : ""}
                 ${list}
+                ${s.after ? `<p class="case__body">${s.after}</p>` : ""}
               </section>`;
     })
     .join("");
@@ -112,8 +113,8 @@
          <h2 class="case__h">${item.resultsHeading || "The results"}</h2>
          <ul class="case__results">${item.results.map((r) => `<li>${r}</li>`).join("")}</ul>
        </section>`
-    : item.result
-    ? `<p class="case__result">${item.result}</p>`
+    : (item.caseResult || item.result)
+    ? `<p class="case__result">${item.caseResult || item.result}</p>`
     : "";
 
   // Recognition — wins + additional nods

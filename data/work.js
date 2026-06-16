@@ -363,30 +363,43 @@ const WORK = [
       { name: "Dani Aravich", note: "Team USA" },
       { name: "Ilona & Olivia", note: "Team USA" },
     ],
+    tagline: "A local guide that happened to be AI.",
     story:
-      "Gemini as a Parisian coach, confidant, and tour guide. Five Team USA athletes used Google AI to navigate a real day in Paris, food, getting around, language, culture, each episode themed to that athlete's own life. 1–2 min hero episodes + :30 cutdowns, using Gemini, Maps, Lens, and Circle to Search.",
+      "What if your first day in Paris came with a local friend?<br /><br />For the Paris Olympics, five Team USA athletes explored the city using Gemini as their guide, translator, travel planner, and occasional confidence boost.<br /><br />Each episode followed a different athlete through the places, foods, neighborhoods, and experiences they were actually curious about—turning AI into something far more useful than a product demo.",
+    caseIntro:
+      "Paris can be magical. It can also be confusing.<br /><br />For the Olympics, we wanted to show Gemini not as a piece of technology, but as the kind of companion every traveler wishes they had: someone who knows where to go, how to get there, what to order, and how to ask for it.<br /><br />So we handed it to five Team USA athletes and followed them through the city.",
     sections: [
       {
+        h: "The opportunity",
+        p: "Most AI marketing talks about what the technology can do.<br /><br />Travel is a better way to show it.<br /><br />The challenge was demonstrating multiple Google AI products in a way that felt natural, useful, and human—without turning the work into a feature demonstration.",
+      },
+      {
         h: "The idea",
-        p: "Gemini as a Parisian coach, confidant, and tour guide, given to five Team USA athletes to navigate a real day in the city, each episode shaped by their own interests and personality.",
+        p: "Treat Gemini like a Parisian friend.<br /><br />Each athlete received a personalized day in the city shaped around their own interests, from vintage shopping and pastry hunting to hidden neighborhoods and iconic views.<br /><br />Gemini helped guide the experience, while Paris did the rest.",
       },
       {
         h: "The episodes",
-        p: "Format: 1–2 min hero videos + :30 cutdowns, using Gemini, Maps, Lens, and Circle to Search.",
+        p: "Five athletes. Five versions of Paris.<br /><br />Each episode followed a different curiosity:",
         list: [
-          "Vintage Shopping with Laurie, fashion",
-          "City of Love with Missy Franklin, casual learning + art",
-          "Off the Beaten Path with Dani Aravich, ideation + trip planning",
-          "Iconic Paris Views with Jagger Eaton, trip planning",
-          "Pastry Tour with Ilona & Olivia, food",
+          "Vintage shopping with Laurie",
+          "Art, culture, and wandering with Missy Franklin",
+          "Hidden corners of the city with Dani Aravich",
+          "Iconic views with Jagger Eaton",
+          "A pastry crawl with Ilona and Olivia",
         ],
+        after: "The result felt less like branded content and more like recommendations from a well-connected friend.",
+      },
+      {
+        h: "Why it worked",
+        p: "The best demonstrations don't feel like demonstrations.<br /><br />By focusing on the athletes' curiosity instead of the technology itself, Gemini became part of the experience rather than the subject of it.<br /><br />The city stayed the star.",
       },
       {
         h: "My role",
-        p: "Creative & Innovation Director, I concepted the series, briefed and partnered with Team USA, and worked hands-on with production through pre-pro, on set in Paris, and through post and the social rollout.",
+        p: "Creative & Innovation Director from concept through launch.<br /><br />I developed the series format, athlete storylines, and creative approach, partnering closely with Team USA, Google, and production teams from planning through filming in Paris and social rollout.",
       },
     ],
-    result: "Five-episode Team USA social series · Paris 2024",
+    result: "Paris looked good on them.",
+    caseResult: "A love letter to getting lost in Paris.",
   },
   {
     id: "culture-creators",
