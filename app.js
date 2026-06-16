@@ -16,7 +16,7 @@
     rustic: ["#9a4416", "#5e2a0c"],
     mauve:  ["#a6907f", "#7c6757"],
   };
-  const SWATCH = { "#847949": "olive", "#B7C5CC": "blue" };
+  const SWATCH = { "#847949": "olive", "#B7C5CC": "blue", "#C4907A": "clay" };
 
   const FILTERS = ["All", "Experiential", "Social", "CTV", "Publisher", "Production"];
   const FILTER_DOT = {
