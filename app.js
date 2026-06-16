@@ -395,7 +395,7 @@
          <p class="ql__story">${item.story}</p>
          ${bundle}
          <p class="ql__result">${item.result}</p>
-         <a class="ql__cta" href="case.html?id=${item.id}">${item.liveApp ? "Open the live app →" : "Full case →"}</a>
+         <a class="ql__cta" href="case.html?id=${item.id}">${item.liveApp ? "Try It →" : "Open the Case →"}</a>
        </div>`
     );
   }
@@ -403,11 +403,11 @@
   function openAbout() {
     openModal(
       `<div class="ql__inner" style="padding-top:2.2rem">
-         <h2 class="ql__title">About</h2>
+         <h2 class="ql__title">A Bit About Me</h2>
          <p class="ql__rolemeta">Carlie Nicole · New York, NY</p>
-         <p class="ql__story">A creative operator who builds the experience and the
-           systems that run it. Nine years across experiential production, creative
-           direction, and innovation. Currently leading creative &amp; AI work for Google.</p>
+         <p class="ql__story">I grew up around people who made things. Furniture, homes,
+           dinners, gardens, businesses—whatever needed building. Now I do the same thing,
+           just with campaigns, experiences, spaces, and systems.</p>
          <p class="ql__result">CU Boulder · BA, Studio Art</p>
          <a class="ql__cta" href="assets/Carlie-Buske-Resume.pdf" download>Download résumé ↓</a>
        </div>`

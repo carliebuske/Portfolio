@@ -7,7 +7,7 @@
 
   if (!item || item.type === "swatch") {
     root.innerHTML =
-      `<a class="case__back" href="index.html#work">← Back to work</a>
+      `<a class="case__back" href="index.html#work">← Back to the work</a>
        <h1 class="case__title" style="margin-top:1.5rem">Not found</h1>
        <p class="case__story">That case doesn't exist yet.</p>`;
     return;
@@ -62,7 +62,7 @@
     ? `<section class="case__section" style="max-width:none">
          <div class="case__livebar">
            <span class="case__livetag">● Live demo · fully interactive</span>
-           <a class="case__launch" href="${item.liveApp}" target="_blank" rel="noopener">Launch fullscreen ↗</a>
+           <a class="case__launch" href="${item.liveApp}" target="_blank" rel="noopener">Try It Fullscreen ↗</a>
          </div>
          <div class="case__live"><iframe src="${item.liveApp}" title="${item.title} — live app" loading="lazy"></iframe></div>
        </section>`
@@ -126,7 +126,7 @@
     : "";
 
   root.innerHTML =
-    `<a class="case__back" href="index.html#work">← Back to work</a>
+    `<a class="case__back" href="index.html#work">← Back to the work</a>
      ${reelBlock}
      ${indev}
      <h1 class="case__title">${item.title}</h1>
