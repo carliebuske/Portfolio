@@ -818,15 +818,17 @@ const WORK = [
       "assets/culturelle/06222022_CULTURELLE_SHOT_7_39_R3.jpeg",
     ],
     story:
-      "A bold, color-driven campaign about women's health and resilience. Each scene owned its own Culturelle brand color, pink, green, yellow, building a visual language that's both intimate and commanding. TVC, social, and digital ad campaign built end to end.",
+      "Women are built different. The campaign started there.<br /><br />A color-driven brand world built around the realities of women's health, using bold visual storytelling, everyday moments, and unapologetic honesty. I led creative direction on set, shaping the visual language, environments, and campaign identity across TV, digital, and social.",
+    caseIntro:
+      "Women are built different.<br /><br />The work celebrated that fact through a series of bold, color-coded worlds inspired by the realities, routines, and resilience of women's everyday lives.<br /><br />Rather than approach women's health through clinical language, the campaign used humor, confidence, and highly stylized visual storytelling to make the conversation feel more open, modern, and human.",
     sections: [
       {
         h: "The idea",
-        p: "Women's wellness isn't one-note, it's complex, resilient, built on intention. The campaign gave each story its own bold visual identity: a color universe that made the brand feel expansive and human at once.",
+        p: "Women's health isn't one story.<br /><br />It's millions of small moments women understand immediately.<br /><br />The campaign used color as a storytelling device, building distinct visual worlds that transformed everyday experiences into something graphic, memorable, and impossible to ignore.",
       },
       {
         h: "The approach",
-        p: "Art direction shaped the whole campaign. Each scene assigned a distinct Culturelle brand color, hot pink, vibrant green, rich yellow, so the color itself became the storytelling device. The result is a campaign that's visually unmissable and deeply on-brand.",
+        p: "Every scene lived inside its own Culturelle color universe.<br /><br />Pink. Green. Yellow.<br /><br />Sets, wardrobe, props, and environments were designed around a single dominant color, allowing the visual system itself to become the campaign language.<br /><br />The result felt playful without losing credibility, and bold without losing warmth.",
         list: [
           "TVC (broadcast + digital)",
           "Social & influencer cut-downs",
@@ -836,7 +838,11 @@ const WORK = [
       },
       {
         h: "My role",
-        p: "Art Direction + Campaign Strategy + Production + On-Set Creative Direction. I built the color language and visual strategy from the start, oversaw production through pre-pro and on-set, and ensured every frame honored the Culturelle brand through intentional, bold color.",
+        p: "Creative Director and Senior Art Director across campaign development and production.<br /><br />I helped shape the campaign concept, built the visual language, led creative direction on set, and worked closely across production, set design, styling, and post to ensure every frame felt intentional, graphic, and distinctly Culturelle.",
+      },
+      {
+        h: "Why it worked",
+        p: "The campaign didn't speak at women.<br /><br />It reflected experiences they already recognized.<br /><br />By grounding the work in familiar moments and elevating them through design, the conversation felt less like health marketing and more like cultural storytelling.",
       },
     ],
     awards: {
@@ -844,7 +850,8 @@ const WORK = [
         "Comm Awards, Award of Distinction",
       ],
     },
-    result: "Award-winning TVC & social campaign · bold color-first creative",
+    result: "Women's health, in full color.",
+    caseResult: "Women's health, in full color.",
   },
 ];
 
