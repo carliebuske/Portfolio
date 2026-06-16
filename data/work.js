@@ -688,7 +688,9 @@ const WORK = [
       "assets/vrbo/vrbo16.jpeg",
     ],
     story:
-      "Vrbo's top property owners, dropped into an 'Electric Cowboy' world. For the second year of Vrbo's annual Partner Summit, I led the creative for a sold-out conference that fused Scottsdale's western landscape with Vrbo's future-facing tech story, three edge-lit acrylic stages, a western town built entirely from light, and a fireworks-capped opening night. 600 attendees. Sold out.",
+      "For VRBO's annual Partner Summit in Scottsdale, we built an immersive world called Electric Cowboy—a collision of desert landscapes, western nostalgia, and future-facing technology.<br /><br />Three custom stages, a town built entirely from light, and a fireworks-capped opening night transformed a traditional conference into an environment guests could step inside.<br /><br />600 attendees. Sold out.",
+    caseIntro:
+      "VRBO's annual Partner Summit brought together the company's top property owners for a week of learning, collaboration, and future planning.<br /><br />Instead of treating the conference as a standard corporate event, we created an original world: Electric Cowboy. A visual language inspired equally by Scottsdale's desert landscape and VRBO's innovation story.",
     sections: [
       {
         h: "The opportunity",
@@ -696,28 +698,27 @@ const WORK = [
       },
       {
         h: "The idea",
-        p: "Electric Cowboy, fuse the western surroundings of Scottsdale with the future-focused subject matter of the conference. An art direction that brings tech and western culture together, using materials visually associated with technology and the future so the room itself tells the innovation story.",
+        p: "Electric Cowboy imagined what happens when western culture meets technology.<br /><br />Desert sunsets, frontier iconography, edge-lit acrylic, and immersive lighting systems combined into a world that felt familiar and futuristic at the same time.<br /><br />The environment itself became the storytelling device.",
       },
       {
         h: "The execution",
-        p: "Three stages, three landscapes: each stage design represented a different western landscape, but built from edge-lit acrylic, so the western world was rendered in light and tech, physically embodying Vrbo's dedication to innovation. The opening reception was a western town built from light, with photobooth, electronic music, and a fireworks display.",
-        list: [
-          "Three edge-lit acrylic stages, each a different western landscape",
-          "Opening reception: western town built from light + photobooth + fireworks",
-          "Environmental & graphic design",
-          "Production & tour management end to end",
-        ],
+        p: "Every major touchpoint lived inside the Electric Cowboy world.<br /><br />—Three custom stages inspired by different western landscapes<br /><br />—Edge-lit acrylic environments that transformed traditional scenic design into illuminated architecture<br /><br />—An opening-night experience featuring a western town built entirely from light<br /><br />—Environmental graphics, wayfinding, stage design, production, and guest experience developed as one connected system<br /><br />—Fireworks closing out opening night beneath the Scottsdale desert sky",
       },
       {
         h: "My role",
-        p: "Creative Lead, ideation through onsite execution. I originated the 'Electric Cowboy' concept, led the art direction and environmental design, managed production partnerships, and directed the experience onsite.",
+        p: "Creative Lead from concept through onsite execution.<br /><br />I originated the Electric Cowboy platform, led environmental and stage design, directed the visual language across the event, and partnered with production teams from early concepting through installation and onsite delivery.",
+      },
+      {
+        h: "Why it worked",
+        p: "Most conferences ask people to sit through information.<br /><br />Electric Cowboy gave people a place to experience it.<br /><br />The environment carried the story before a single keynote ever began.",
       },
     ],
     results: [
       "600 attendees",
       "Sold-out conference",
     ],
-    result: "600-person sold-out conference · originate-and-build experiential",
+    result: "A western town built entirely from light.",
+    caseResult: "A western town built entirely from light.",
   },
   {
     id: "salesforce",
