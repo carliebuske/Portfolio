@@ -48,7 +48,7 @@ const WORK = [
     id: "made-by-google-afterparty",
     type: "work",
     tier: 1,
-    title: "Google Pixel",
+    title: "Google Pixel — After Party",
     client: "Google",
     caseMeta: "Pixel 9 + Gemini · Made by Google 2024 · Google / MFG × Ogilvy",
     role: "Creative & Innovation Director",
@@ -74,43 +74,41 @@ const WORK = [
       { name: "Trixie Mattel & Monét X Change", note: "Drag Race" },
       { name: "Joe Ando", note: "Circle to Search" },
     ],
+    tagline: "Tech keynote, meet culture.",
     story:
-      "The Made by Google launch usually speaks to tech press. We threw it an After Party instead, a live-to-tape, Keke Palmer–hosted variety show that aired on YouTube right after the event, turning Pixel 9 + Gemini into culture with the internet's favorite talent. It outperformed Google's own Gemini benchmark.",
+      "The Made by Google launch usually speaks to tech press. We gave it an after party instead.<br /><br />Hosted by Keke Palmer, the live-to-tape variety show aired immediately after the event, pairing Pixel 9 and Gemini with some of the internet's favorite personalities—from Sean Evans and Jimmy Butler to Trixie Mattel and Monét X Change.<br /><br />The result: a product launch that felt more like culture than a keynote.",
+    caseIntro:
+      "The Made by Google launch typically speaks to a room full of tech press. We wanted Pixel 9 and Gemini to reach everyone else.<br /><br />So instead of ending the event, we extended it—with After Party, a live-to-tape variety show hosted by Keke Palmer that aired immediately after the keynote and brought Pixel into the worlds people were already paying attention to.",
     sections: [
       {
         h: "The opportunity",
-        p: "Made by Google announcements typically reach a narrow room, industry and tech press. The opportunity: make the Pixel 9 + Gemini launch land with a far broader, culture-first audience, through the names and faces Gen Z actually follows.",
+        p: "Pixel launches are built for attention, but attention isn't the same thing as culture.<br /><br />The opportunity was to take a product announcement designed for industry insiders and give it a second life with the audiences actually driving conversation online.",
       },
       {
         h: "The idea",
-        p: "Give Pixel and Gemini the coming-out party they deserve. A live-to-tape, 30-minute variety show, hosted by Keke Palmer, that aired on YouTube immediately after the Made by Google event, then broke apart into social.",
+        p: "Give Pixel and Gemini the coming-out party they deserved.<br /><br />A live-to-tape variety show hosted by Keke Palmer, featuring talent people actually choose to spend time with, released immediately after the keynote and designed to break apart across social.",
       },
       {
         h: "The execution",
-        p: "We humanized the new Pixel 9 features by stitching beloved internet IP into segments, hosted by Keke Palmer, with designer Joe Ando using Circle to Search to design a custom look. Built by one combined Google/WPP team (MFG × Ogilvy), adapting and creating in real time. Partners: BuzzFeed, Complex, First We Feast, Paramount.",
-        list: [
-          "Hot Ones (First We Feast), Sean Evans",
-          "Complex Sneaker Shopping, Joe La Puma + Jimmy Butler",
-          "BuzzFeed Puppy Interviews",
-          "RuPaul's Drag Race, Trixie Mattel & Monét X Change",
-        ],
+        p: "We used beloved internet formats as the delivery system.<br /><br />Sean Evans brought Hot Ones. Jimmy Butler stopped by Sneaker Shopping. Trixie Mattel and Monét X Change entered from the Drag Race universe. Designer Joe Ando used Circle to Search to build a custom look in real time.<br /><br />Every segment translated Pixel features into something more human: entertainment.<br /><br />Built by one combined Google + WPP team alongside BuzzFeed, Complex, First We Feast, and Paramount.",
       },
       {
         h: "Why it matters",
-        p: "First-of-its-kind for Google, one combined WPP/Google team breaking silos to run creative + media together across paid, owned, and earned (the \"Modern Marketing Mix\"), turning a product keynote into a cultural moment.",
+        p: "Most product launches end when the keynote does.<br /><br />This one became a show.<br /><br />After Party proved that product marketing doesn't have to feel like product marketing. It can earn attention the same way everything else does: by being worth watching.",
       },
       {
         h: "My role",
-        p: "Creative & Innovation Director on the show, in it from ideation through delivery. I helped shape the concept and segments, briefed and partnered with the IP and media partners (BuzzFeed, Complex, First We Feast, Paramount) and the combined Google/WPP team, and worked hand-in-hand with production through pre-pro, the live-to-tape, and post.",
+        p: "Creative & Innovation Director from concept through launch.<br /><br />I helped shape the show's format, talent integrations, and creative approach, partnering closely with production, platform partners, media teams, and talent stakeholders from development through live execution and post-production.",
       },
     ],
+    resultsHeading: "A few receipts.",
     results: [
       "Outperformed Google's Gemini Top View benchmark, 3.57% CTR (vs 3.25%) · 3.63% ER (vs 3.57%)",
       "TikTok drove 40% of all views; Top View ran above benchmark",
       "45 pieces of content · 8 talent · 6 platforms · 23 handles",
       "Created an ownable, repeatable \"After Party\" IP for Google",
     ],
-    result: "Outperformed Google's own Gemini benchmark",
+    result: "Turned a keynote into appointment viewing.",
   },
   {
     id: "farm-to-turntable",

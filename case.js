@@ -109,7 +109,7 @@
   // Results — a metric grid when provided, else the single headline result
   const results = item.results && item.results.length
     ? `<section class="case__section">
-         <h2 class="case__h">The results</h2>
+         <h2 class="case__h">${item.resultsHeading || "The results"}</h2>
          <ul class="case__results">${item.results.map((r) => `<li>${r}</li>`).join("")}</ul>
        </section>`
     : item.result
@@ -132,7 +132,7 @@
      <h1 class="case__title">${item.title}</h1>
      ${item.tagline ? `<p class="case__tagline">${item.tagline}</p>` : ""}
      <p class="case__meta">${meta}</p>
-     <p class="case__story">${item.story}</p>
+     <p class="case__story">${item.caseIntro || item.story}</p>
      ${bundle}
      ${live}
      ${galleryTop}
