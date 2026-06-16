@@ -119,7 +119,7 @@
   // Recognition — wins + additional nods
   const awards = item.awards
     ? `<section class="case__section">
-         <h2 class="case__h">Recognition</h2>
+         <h2 class="case__h">${item.awardsHeading || "Recognition"}</h2>
          <ul class="case__awards">${(item.awards.wins || []).map((w) => `<li>${w}</li>`).join("")}</ul>
          ${item.awards.more ? `<p class="case__more">${item.awards.more}</p>` : ""}
        </section>`

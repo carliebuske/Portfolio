@@ -203,34 +203,47 @@ const WORK = [
       { name: "Evan Ross Katz", note: "superfan-creator" },
       { name: "Nicholas Duvernay", note: "show talent" },
     ],
+    tagline: "We didn't interrupt the fandom. We joined it.",
     story:
-      "We didn't interrupt the White Lotus fandom, we joined it. An 8-part miniseries that put a Pixel in the hands of the show's most renowned superfan, turning HBO's most-anticipated premiere into a Pixel + Gemini story. 108.6M impressions. A Clio.",
+      "We didn't interrupt the White Lotus fandom. We joined it.<br /><br />As anticipation for HBO's biggest premiere reached a fever pitch, we handed a Pixel to the show's most devoted superfan and let him take everyone along for the ride.<br /><br />The result was an 8-part miniseries that turned Pixel and Gemini into the ultimate travel companions—and one of the internet's favorite vacation companions.<br /><br />108.6M impressions later, people seemed to enjoy the trip.",
+    caseIntro:
+      "We didn't interrupt the White Lotus fandom. We joined it.<br /><br />Rather than inserting a brand into the conversation around HBO's most anticipated premiere, we found someone who was already leading it.<br /><br />So we handed White Lotus superfan Evan Ross Katz a Pixel and built a travel series around the experience, turning fandom into storytelling and Pixel into part of the adventure.",
     sections: [
       {
+        h: "The opportunity",
+        p: "The White Lotus didn't need more advertising.<br /><br />It already had an audience dissecting every frame, theory, outfit, and side-eye online.<br /><br />The opportunity wasn't to create attention. It was to participate in it.",
+      },
+      {
         h: "The idea",
-        p: "Rather than interrupt the White Lotus fandom, we joined it, handing the show's most renowned superfan, Evan Ross Katz, a miniseries of his own with a Pixel in hand, casting the phone and Gemini as the ultimate travel companion.",
+        p: "Instead of marketing to White Lotus fans, we made something for them.<br /><br />We partnered with Evan Ross Katz, arguably the internet's most dedicated White Lotus correspondent, and sent him into the world with a Pixel in hand.<br /><br />The phone became part travel companion, part storyteller, and part backstage pass.",
       },
       {
         h: "What we made",
-        p: "An 8-part miniseries with Evan Ross Katz and show talent Nicholas Duvernay, live across Max, Instagram, and TikTok.",
+        p: "An 8-part social miniseries featuring Evan Ross Katz and White Lotus cast member Nicholas Duvernay, released across Max, Instagram, TikTok, and HBO social channels.<br /><br />The partnership included:",
         list: [
-          "Tech exclusivity with the franchise",
-          "Season 1–3 title sponsorship + finale takeover on Max",
-          "Original social creator content",
-          "Interactive ad units",
+          "Original creator-led content",
+          "Pixel and Gemini integrations throughout the series",
+          "Franchise sponsorship and season-long presence",
+          "Interactive experiences and social extensions",
         ],
       },
       {
+        h: "Why it worked",
+        p: "People don't want brands in their fandoms.<br /><br />They want brands that understand them.<br /><br />By building with existing fan behavior instead of interrupting it, Pixel became part of the conversation rather than an ad sitting beside it.",
+      },
+      {
         h: "My role",
-        p: "Creative & Innovation Director on the partnership, in it from ideation through delivery. I built the concept and talent strategy, briefed and partnered closely with HBO/Max and talent, and worked alongside the production team through pre-pro, on set, and post.",
+        p: "Creative & Innovation Director from pitch through production.<br /><br />I developed the partnership concept and talent approach, worked closely with HBO/Max, talent, and production partners, and helped guide the project from strategy through filming, post-production, and launch.",
       },
     ],
+    resultsHeading: "Turns out people like vacationing with Evan Ross Katz.",
     results: [
       "108.6M total campaign impressions",
       "130% overdelivery across all placements on Max",
       "61.6K total social engagements",
       "40 added-value brand mentions, 28 talent posts, 6 The White Lotus posts, 6 press mentions",
     ],
+    awardsHeading: "A few souvenirs.",
     awards: {
       wins: [
         "Digiday Award, Best Use of Influencer Marketing",
@@ -240,7 +253,7 @@ const WORK = [
       ],
       more: "Shortlists and finalist nods at Festival of Media North America, OMMA, Smarties, Epica, and Mediapost Planning & Buying Awards.",
     },
-    result: "108.6M impressions · Digiday + 3× Clio",
+    result: "108.6 million reasons to pack a Pixel.",
   },
   {
     id: "gemini-leslie-olympics",
