@@ -621,7 +621,9 @@ const WORK = [
       "assets/uniqlo/uniqlo10.jpeg",
     ],
     story:
-      "UNIQLO's UT graphic tees, turned into a four-city block party. A two-phase street-and-city activation across LA, SF, NYC, and Boston that displayed the tees like artwork and made them the centerpiece of a block-party spectacle, with a free trip to Tokyo on the line. 3.5M+ impressions, 23,759 samples in hands, 6,138 attendees.",
+      "UNIQLO's UT graphic tees became the centerpiece of a four-city tour across Los Angeles, San Francisco, New York, and Boston.<br /><br />Rather than launch the collection through traditional retail, we treated the shirts like artwork—taking them into the streets through installations, pop-ups, and block parties that turned a product launch into a cultural event.<br /><br />3.5M+ impressions, 23,759 samples distributed, and 6,138 attendees across four markets.",
+    caseIntro:
+      "The UT collection already had the product.<br /><br />The opportunity was to give it a stage.<br /><br />Wear Your World transformed a graphic-tee launch into a traveling street exhibition and block party series across four cities, celebrating the artists, graphics, and culture behind the collection rather than simply placing shirts on shelves.",
     sections: [
       {
         h: "The opportunity",
@@ -629,20 +631,19 @@ const WORK = [
       },
       {
         h: "The idea",
-        p: "Wear Your World, treat the graphic tees as wearable art, and build a two-phase activation that earns the street first, then throws the party. Phase one seeds presence at ground level; phase two converts it into a spectacle.",
+        p: "Treat the shirts like artwork.<br /><br />Instead of leading with retail, we built an experience around discovery, displaying the collection in unexpected ways throughout each city and culminating in large-scale public events that felt part gallery, part block party.",
       },
       {
         h: "The execution",
-        p: "A two-phase activation, owned concept through onsite, events, graphic design, installations, mobile tours, pop-ups, PR stunts, production, and sampling.",
-        list: [
-          "Phase 1, Street teams distributed promotional clothespins and scratch-off cards on the weekends leading up to each city activation, building presence market by market",
-          "Phase 2, #WearYourWorld Block Parties in LA, SF, and NYC transformed the collection into a visual spectacle displaying the UT shirts as art",
-          "Activities and photo ops invited passersby in; entrants could win a free trip to Tokyo, doubling as a powerful data-capture driver",
-        ],
+        p: "A two-phase activation across Los Angeles, San Francisco, New York, and Boston.<br /><br />—Street teams seeded the campaign with promotional touchpoints and giveaways ahead of launch.<br /><br />—Large-scale city events transformed the collection into a public exhibition, displaying UT graphics as oversized visual installations.<br /><br />—Guests could engage with the collection, participate in activities, receive product samples, and enter to win a trip to Tokyo.<br /><br />—Environmental design, installations, production, and onsite experience were customized market by market.",
       },
       {
         h: "My role",
-        p: "Creative Lead, ideation through onsite execution across four markets. I originated the 'Wear Your World' concept, led the art direction and environmental design, and ran production from pre-pro through the multi-city tour.",
+        p: "Creative Lead from concept through onsite execution.<br /><br />I originated the Wear Your World platform, led art direction and environmental design, and worked across production from early concepting through the multi-city tour. The work spanned installations, experiential design, event production, and onsite creative leadership across all four markets.",
+      },
+      {
+        h: "Why it worked",
+        p: "The campaign treated apparel like culture rather than inventory.<br /><br />By putting the artwork at the center and bringing it into the street, the collection felt discovered rather than advertised.",
       },
     ],
     results: [
@@ -653,7 +654,8 @@ const WORK = [
       "24,468 website visitors",
       "3,278 opted in to future mail",
     ],
-    result: "3.5M+ impressions · 23,759 samples · four-market activation",
+    result: "Graphic tees, treated like gallery pieces.",
+    caseResult: "Graphic tees, treated like gallery pieces.",
   },
   {
     id: "vrbo",
