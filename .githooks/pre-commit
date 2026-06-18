@@ -1,0 +1,41 @@
+#!/bin/sh
+# Pre-commit guard for the portfolio.
+# Blocks a commit if any core JS file is invalid or contains smart/curly
+# double-quotes — the exact failure that once blanked the work board on the
+# live site (curly quotes can't be JS string delimiters).
+#
+# Armed via:  git config core.hooksPath .githooks
+# (re-armed automatically each web session by the SessionStart hook in
+#  .claude/settings.json)
+
+if ! command -v node >/dev/null 2>&1; then
+  echo "pre-commit: node not found — skipping JS validation." >&2
+  exit 0
+fi
+
+fail=0
+
+for f in app.js case.js data/work.js; do
+  [ -f "$f" ] || continue
+
+  # 1) No smart/curly double-quotes (U+201C / U+201D). UTF-8 aware via node.
+  if node -e 'const s=require("fs").readFileSync(process.argv[1],"utf8");process.exit(/[“”]/.test(s)?2:0)' "$f"; then
+    :
+  else
+    echo "✗ $f contains smart/curly double-quotes (\" or \"). Use straight quotes (\")." >&2
+    fail=1
+  fi
+
+  # 2) The file must parse as valid JavaScript.
+  if ! node --check "$f" 2>/tmp/precommit-node.err; then
+    echo "✗ $f is not valid JavaScript:" >&2
+    sed 's/^/  /' /tmp/precommit-node.err >&2
+    fail=1
+  fi
+done
+
+if [ "$fail" -ne 0 ]; then
+  echo "" >&2
+  echo "Commit blocked — fix the issues above so the live site won't break." >&2
+  exit 1
+fi
